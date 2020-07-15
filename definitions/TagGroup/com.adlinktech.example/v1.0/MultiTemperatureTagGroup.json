@@ -1,0 +1,20 @@
+{
+  "name": "Temperature",
+  "context": "com.adlinktech.example",
+  "qosProfile": "telemetry",
+  "version": "v1.0",
+  "description": "ADLINK Edge SDK Example Temperature TagGroup",
+  "tags": [{
+      "name": "temperature1",
+      "description": "Temperature1",
+      "kind": "FLOAT32",
+      "unit": "°C"
+    },
+    {
+      "name": "temperature2",
+      "description": "Temperature2",
+      "kind": "FLOAT32",
+      "unit": "°C"
+    }
+  ]
+}

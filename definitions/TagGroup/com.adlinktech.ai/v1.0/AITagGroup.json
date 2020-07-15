@@ -1,0 +1,67 @@
+{
+  "name": "AITagGroup",
+  "context": "com.adlinktech.ai",
+  "qosProfile": "telemetry",
+  "version": "v1.0",
+  "tags": [{
+      "name": "MachineID",
+      "description": "Machine Identification",
+      "kind": "TYPE_UINT16",
+      "unit": "None"
+    },  {
+      "name": "ServiceID",
+      "description": "Service Identification",
+      "kind": "TYPE_UINT16",
+      "unit": "None"
+    }, {
+      "name": "SourceID",
+      "description": "Data source Identification",
+      "kind": "TYPE_UINT16",
+      "unit": "None"
+    }, {
+      "name": "AIName",
+      "description": "AI Inference name ex: DEX100, Demo1",
+      "kind": "TYPE_STRING",
+      "unit": "None"
+    }, {
+      "name": "AICategory",
+      "description": "AI Inference type ex: Classification, Detection, OCR",
+      "kind": "TYPE_STRING",
+      "unit": "None"
+    }, {
+      "name": "Frame_No",
+      "description": "Frame Number",
+      "kind": "TYPE_UINT64",
+      "unit": "None"
+    }, {
+      "name": "ReceivedTimestamp",
+      "description": "UTC data received timestamp",
+      "kind": "TYPE_UINT64",
+      "unit": "ms"
+    }, {
+      "name": "InferenceTime",
+      "description": "Inference duration",
+      "kind": "TYPE_UINT64",
+      "unit": "ms"
+    }, {
+      "name": "SourceTimestamp",
+      "description": "UTC timestamp from source",
+      "kind": "TYPE_UINT64",
+      "unit": "ms"
+    }, {
+      "name": "Resultformat",
+      "description": "Name of the result type need to read. ex:Box , StringBox ",
+      "kind": "TYPE_STRING",
+      "unit": "None"
+    }, {
+      "name": "StringResult",
+      "description": "AI ouput array of string",
+      "kind": "TYPE_STRING_SEQ",
+      "unit": "None"
+    }, {
+      "name": "BoxResult",
+      "description": "AI ouput array of (x,y) for two corner of box. ex: {0,0,120,240} is box with two corner (0,0) and  (120,240)",
+      "kind": "TYPE_INT32_SEQ",
+      "unit": "None"
+    }]
+}

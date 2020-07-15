@@ -2,7 +2,7 @@ if [ ! -d workingdir ]
 then
 # gather TagGroup files
 mkdir workingdir
-for i in `find ../historical -name '*TagGroup.json'`
+for i in `find -L ../historical -name '*TagGroup.json'`
 do
 FILENAME="`basename $i`"
 cp --backup=numbered $i workingdir/$FILENAME

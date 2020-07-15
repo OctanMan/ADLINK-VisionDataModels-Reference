@@ -1,0 +1,15 @@
+{
+   "name": "raw_data",
+   "context": "com.adlinktech.usb2405",
+   "qosProfile": "vibration",
+   "version": "v1.0",
+   "description": "MCM100 vibration data from channel",
+   "tags": [
+      {
+         "name": "voltage",
+         "description": "Raw Voltage from USB 2405 DAQ",
+         "kind": "FLOAT32_SEQ",
+         "unit": "V"
+      }
+   ]
+}

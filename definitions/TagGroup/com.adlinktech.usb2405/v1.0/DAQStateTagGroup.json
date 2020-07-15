@@ -1,0 +1,70 @@
+{
+   "name": "configuration",
+   "context": "com.adlinktech.usb2405",
+   "qosProfile": "state",
+   "version": "v1.0",
+   "description": "USB2405 data acquisition information",
+   "tags": [
+      {"name": "CardID", "description": "The card id that DAQ use", "kind": "INT16", "unit": "N/A"},
+      {"name": "SampleRate", "description": "The sample rate that DAQ channel use", "kind": "INT64", "unit": "N/A"},
+      {"name": "DataCount", "description": "The data length that DAQ acquire once", "kind": "INT64", "unit": "N/A"},
+      {
+         "name": "ChannelInfo_A0",
+         "description": "channel 0 configurations",
+         "kind": "NVP_SEQ",
+         "unit": "n/a",
+         "typedefinition": "ChannelStatus"
+      },
+      {
+         "name": "ChannelInfo_A1",
+         "description": "channel 1 configurations",
+         "kind": "NVP_SEQ",
+         "unit": "n/a",
+         "typedefinition": "ChannelStatus"
+      },
+      {
+         "name": "ChannelInfo_A2",
+         "description": "channel 2 configurations",
+         "kind": "NVP_SEQ",
+         "unit": "n/a",
+         "typedefinition": "ChannelStatus"
+      },
+      {
+         "name": "ChannelInfo_A3",
+         "description": "channel 3 configurations",
+         "kind": "NVP_SEQ",
+         "unit": "n/a",
+         "typedefinition": "ChannelStatus"
+      },
+      {
+         "name": "TriggerMode",
+         "description": "The trigger mode that DAQ use",
+         "kind": "NVP_SEQ",
+         "unit": "N/A",
+         "typedefinition": "TriggerModeSetting"
+      }
+   ]
+},
+{
+   "typedefinition": "ChannelStatus",
+   "tags": [
+      {"name": "ChannelNo", "description": "channel active status", "kind": "INT16", "unit": "N/A"},
+      {"name": "active", "description": "channel active status", "kind": "BOOLEAN", "unit": "N/A"},
+      {"name": "flowId", "description": "the flowID channel use", "kind": "STRING", "unit": "N/A"},
+      {"name": "EnableIEPE", "description": "channel IEPE status", "kind": "BOOLEAN", "unit": "N/A"},
+      {"name": "InputType", "description": "channel input type", "kind": "STRING", "unit": "N/A"},
+      {"name": "CoupleType", "description": "channel Couple type", "kind": "STRING", "unit": "N/A"}
+   ]
+},
+{
+   "typedefinition": "TriggerModeSetting",
+   "tags": [
+      {"name": "ConversionSource", "description": "channel active status", "kind": "STRING", "unit": "N/A"},
+      {"name": "Mode", "description": "channel active status", "kind": "STRING", "unit": "N/A"},
+      {"name": "Source", "description": "the flowID channel use", "kind": "STRING", "unit": "N/A"},
+      {"name": "Polarity", "description": "channel IEPE status", "kind": "STRING", "unit": "N/A"},
+      {"name": "DLY1Cnt", "description": "channel input type", "kind": "INT16", "unit": "N/A"},
+      {"name": "DLY2Cnt", "description": "channel input type", "kind": "INT16", "unit": "N/A"},
+      {"name": "Level", "description": "channel input type", "kind": "INT16", "unit": "N/A"}
+   ]
+}
