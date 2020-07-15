@@ -1,0 +1,26 @@
+\documentclass{report}
+\usepackage{array}
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage[a4paper,margin=1cm]{geometry}
+\usepackage[section]{placeins}
+\usepackage{underscore}
+%\usepackage{caption}
+%\captionsetup{justification = raggedright, singlelinecheck=false}
+\begin{document}
+%\begin{landscape}
+	\chapter{Introduction}
+	This report contains a reference for the current datamodel (as represented by DataRiver TagGroups).
+	\tableofcontents
+	\listoftables
+	\chapter{TagGroups -- Datamodel}
+	In this chapter you will find the automatically generated documentation for the TagGroups. It is grouped by directory first, then per filename. This relies on the fact that the convention for TagGroup is to store them in a \textit{definitions} folder, which then in turn is further partitioned per \textit{context} and \textit{version}. This means that the result in this document will be shown in chronological order. 
+
+	It is possible to define multiple TagGroups per file. This feature is primarily intented to allow for avoiding repetition (and therefore potential errors) when a certain datamodelling has a different QoS. However, this feature can be abused/misused and therefore lead to definitions of multiple independent TagGroups in one file. It also has the potential for multiple instances of a definition for a TagGroup, which is a bit of a maintenance nightmare. 
+
+	To aid in detecting multiple definitions, this reference also includes a table of what TagGroup is defined in what file. Ideally, each TagGroup will only show up once in that table.
+\include{reference}
+%\end{landscape}
+\end{document}
