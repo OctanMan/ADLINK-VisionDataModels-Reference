@@ -1,0 +1,1213 @@
+\section{../definitions/TagGroup/com.adlinktech.ai/v1.0}
+\subsection{AITagGroup.json}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{l X} 
+       \textbf{Name:} & AITagGroup \\ 
+	   \textbf{Context:} & com.adlinktech.ai \\ 
+	   \textbf{Version:} & v1.0 \\ 
+	   \textbf{Description:} & no description available \\ 
+	   \textbf{QoS:} & telemetry \\
+	   \textbf{Toplevel Typename:} & \textit{No explicit name given} \\ 
+\end{tabularx}
+\caption{AITagGroup:com.adlinktech.ai:v1.0}\label{AITagGroup.json:table:AITagGroup}
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   MachineID & None & UINT16 &  & Machine Identification \\
+   ServiceID & None & UINT16 &  & Service Identification \\
+   SourceID & None & UINT16 &  & Data source Identification \\
+   AIName & None & STRING &  & AI Inference name ex: DEX100, Demo1 \\
+   AICategory & None & STRING &  & AI Inference type ex: Classification, Detection, OCR \\
+   Frame\_No & None & UINT64 &  & Frame Number \\
+   ReceivedTimestamp & ms & UINT64 &  & UTC data received timestamp \\
+   InferenceTime & ms & UINT64 &  & Inference duration \\
+   SourceTimestamp & ms & UINT64 &  & UTC timestamp from source \\
+   Resultformat & None & STRING &  & Name of the result type need to read. ex:Box , StringBox  \\
+   StringResult & None & STRING\_SEQ &  & AI ouput array of string \\
+   BoxResult & None & INT32\_SEQ &  & AI ouput array of (x,y) for two corner of box. ex: {0,0,120,240} is box with two corner (0,0) and  (120,240) \\
+\end{tabularx}
+\caption{AITagGroup:com.adlinktech.ai:v1.0: \textit{Toplevel Type (no explicit name given)}}\label{AITagGroup.json:table:AITagGroup-no-type-given}
+
+
+\end{table}
+
+\section{../definitions/TagGroup/com.adlinktech.usb2405/v1.0}
+\subsection{ChannelDataTagGroup.json}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{l X} 
+       \textbf{Name:} & raw\_data \\ 
+	   \textbf{Context:} & com.adlinktech.usb2405 \\ 
+	   \textbf{Version:} & v1.0 \\ 
+	   \textbf{Description:} & MCM100 vibration data from channel \\ 
+	   \textbf{QoS:} & vibration \\
+	   \textbf{Toplevel Typename:} & \textit{No explicit name given} \\ 
+\end{tabularx}
+\caption{raw\_data:com.adlinktech.usb2405:v1.0}\label{ChannelDataTagGroup.json:table:raw-underscore-data}
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   voltage & V & FLOAT32\_SEQ &  & Raw Voltage from USB 2405 DAQ \\
+\end{tabularx}
+\caption{raw\_data:com.adlinktech.usb2405:v1.0: \textit{Toplevel Type (no explicit name given)}}\label{ChannelDataTagGroup.json:table:raw-underscore-data-no-type-given}
+
+
+\end{table}
+
+\subsection{ChannelMetaDataTagGroup.json}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{l X} 
+       \textbf{Name:} & meta\_data \\ 
+	   \textbf{Context:} & com.adlinktech.usb2405 \\ 
+	   \textbf{Version:} & v1.0 \\ 
+	   \textbf{Description:} & MCM100 meta data from channel \\ 
+	   \textbf{QoS:} & state \\
+	   \textbf{Toplevel Typename:} & \textit{No explicit name given} \\ 
+\end{tabularx}
+\caption{meta\_data:com.adlinktech.usb2405:v1.0}\label{ChannelMetaDataTagGroup.json:table:meta-underscore-data}
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   SampleRate & N/A & INT64 &  & The sample rate that DAQ channel use \\
+   DataCount & N/A & INT64 &  & The data length that DAQ acquire once \\
+\end{tabularx}
+\caption{meta\_data:com.adlinktech.usb2405:v1.0: \textit{Toplevel Type (no explicit name given)}}\label{ChannelMetaDataTagGroup.json:table:meta-underscore-data-no-type-given}
+
+
+\end{table}
+
+\subsection{DAQStateTagGroup.json}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{l X} 
+       \textbf{Name:} & configuration \\ 
+	   \textbf{Context:} & com.adlinktech.usb2405 \\ 
+	   \textbf{Version:} & v1.0 \\ 
+	   \textbf{Description:} & USB2405 data acquisition information \\ 
+	   \textbf{QoS:} & state \\
+	   \textbf{Toplevel Typename:} & \textit{No explicit name given} \\ 
+\end{tabularx}
+\caption{configuration:com.adlinktech.usb2405:v1.0}\label{DAQStateTagGroup.json:table:configuration}
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   ChannelNo & N/A & INT16 &  & channel active status \\
+   active & N/A & BOOLEAN &  & channel active status \\
+   flowId & N/A & STRING &  & the flowID channel use \\
+   EnableIEPE & N/A & BOOLEAN &  & channel IEPE status \\
+   InputType & N/A & STRING &  & channel input type \\
+   CoupleType & N/A & STRING &  & channel Couple type \\
+\end{tabularx}
+\caption{configuration:com.adlinktech.usb2405:v1.0: ChannelStatus}\label{DAQStateTagGroup.json:table:configuration-ChannelStatus}
+
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   ConversionSource & N/A & STRING &  & channel active status \\
+   Mode & N/A & STRING &  & channel active status \\
+   Source & N/A & STRING &  & the flowID channel use \\
+   Polarity & N/A & STRING &  & channel IEPE status \\
+   DLY1Cnt & N/A & INT16 &  & channel input type \\
+   DLY2Cnt & N/A & INT16 &  & channel input type \\
+   Level & N/A & INT16 &  & channel input type \\
+\end{tabularx}
+\caption{configuration:com.adlinktech.usb2405:v1.0: TriggerModeSetting}\label{DAQStateTagGroup.json:table:configuration-TriggerModeSetting}
+
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   CardID & N/A & INT16 &  & The card id that DAQ use \\
+   SampleRate & N/A & INT64 &  & The sample rate that DAQ channel use \\
+   DataCount & N/A & INT64 &  & The data length that DAQ acquire once \\
+   ChannelInfo\_A0 & n/a & NVP\_SEQ & ChannelStatus & channel 0 configurations \\
+   ChannelInfo\_A1 & n/a & NVP\_SEQ & ChannelStatus & channel 1 configurations \\
+   ChannelInfo\_A2 & n/a & NVP\_SEQ & ChannelStatus & channel 2 configurations \\
+   ChannelInfo\_A3 & n/a & NVP\_SEQ & ChannelStatus & channel 3 configurations \\
+   TriggerMode & N/A & NVP\_SEQ & TriggerModeSetting & The trigger mode that DAQ use \\
+\end{tabularx}
+\caption{configuration:com.adlinktech.usb2405:v1.0: \textit{Toplevel Type (no explicit name given)}}\label{DAQStateTagGroup.json:table:configuration-no-type-given}
+
+
+\end{table}
+
+\section{../definitions/TagGroup/com.adlinktech.vision/0.1.0}
+\subsection{CreateStreamTagGroup.json}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{l X} 
+       \textbf{Name:} & CreateStream \\ 
+	   \textbf{Context:} & com.adlinktech.vision \\ 
+	   \textbf{Version:} & 0.1.0 \\ 
+	   \textbf{Description:} & Request the creation of a stream with given configuration. Stream's are unique within a Stream Viewer per StreamId and Inference output type combination. Target the correct Stream Viewer by setting the FlowId of this DataSample to the ContextId of the Stream Viewer. \\ 
+	   \textbf{QoS:} & state \\
+	   \textbf{Toplevel Typename:} & \textit{No explicit name given} \\ 
+\end{tabularx}
+\caption{CreateStream:com.adlinktech.vision:0.1.0}\label{CreateStreamTagGroup.json:table:CreateStream}
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   stream\_id & n/a & STRING &  & The streamId that the Stream Viewer should read Vision data from. \\
+   inference\_output\_type & n/a & STRING &  & What kind of Inference Engine output type to apply to the stream. \\
+\end{tabularx}
+\caption{CreateStream:com.adlinktech.vision:0.1.0: \textit{Toplevel Type (no explicit name given)}}\label{CreateStreamTagGroup.json:table:CreateStream-no-type-given}
+
+
+\end{table}
+
+\subsection{DeleteStreamTagGroup.json}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{l X} 
+       \textbf{Name:} & DeleteStream \\ 
+	   \textbf{Context:} & com.adlinktech.vision \\ 
+	   \textbf{Version:} & 0.1.0 \\ 
+	   \textbf{Description:} & Request the deletion of a stream. Target the correct Stream Viewer by setting the FlowId of this DataSample to the ContextId of the Stream Viewer. \\ 
+	   \textbf{QoS:} & state \\
+	   \textbf{Toplevel Typename:} & \textit{No explicit name given} \\ 
+\end{tabularx}
+\caption{DeleteStream:com.adlinktech.vision:0.1.0}\label{DeleteStreamTagGroup.json:table:DeleteStream}
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   stream\_id & n/a & STRING &  & The streamId of the stream that should be deleted. \\
+   inference\_output\_type & n/a & STRING &  & The Inference Engine output type of the stream to be deleted. \\
+\end{tabularx}
+\caption{DeleteStream:com.adlinktech.vision:0.1.0: \textit{Toplevel Type (no explicit name given)}}\label{DeleteStreamTagGroup.json:table:DeleteStream-no-type-given}
+
+
+\end{table}
+
+\subsection{StreamViewerConfigTagGroup.json}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{l X} 
+       \textbf{Name:} & StreamViewerConfig \\ 
+	   \textbf{Context:} & com.adlinktech.vision \\ 
+	   \textbf{Version:} & 0.1.0 \\ 
+	   \textbf{Description:} & Current configuration of this Stream Viewer instance. \\ 
+	   \textbf{QoS:} & state \\
+	   \textbf{Toplevel Typename:} & \textit{No explicit name given} \\ 
+\end{tabularx}
+\caption{StreamViewerConfig:com.adlinktech.vision:0.1.0}\label{StreamViewerConfigTagGroup.json:table:StreamViewerConfig}
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   stream\_id & n/a & STRING &  & The streamId of the ADLINK Vision stream frame and inference data is being read from. \\
+   inference\_output\_type & n/a & STRING &  & What kind of Inference Engine output type is being applied to the stream. \\
+   rtsp\_streaming\_address & n/a & STRING &  & The address this stream is streaming from. \\
+\end{tabularx}
+\caption{StreamViewerConfig:com.adlinktech.vision:0.1.0: StreamConfig}\label{StreamViewerConfigTagGroup.json:table:StreamViewerConfig-StreamConfig}
+
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   streams & n/a & NVP\_SEQ & StreamConfig & A sequence of the streams this Stream Viewer is streaming. \\
+\end{tabularx}
+\caption{StreamViewerConfig:com.adlinktech.vision:0.1.0: \textit{Toplevel Type (no explicit name given)}}\label{StreamViewerConfigTagGroup.json:table:StreamViewerConfig-no-type-given}
+
+
+\end{table}
+
+\section{../definitions/TagGroup/com.adlinktech.vision/v1.0}
+\subsection{AcknowledgeTagGroup.json}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{l X} 
+       \textbf{Name:} & Acknowledge \\ 
+	   \textbf{Context:} & com.adlinktech.vision \\ 
+	   \textbf{Version:} & v1.0 \\ 
+	   \textbf{Description:} & Confirmation of Alarm events \\ 
+	   \textbf{QoS:} & event \\
+	   \textbf{Toplevel Typename:} & \textit{No explicit name given} \\ 
+\end{tabularx}
+\caption{Acknowledge:com.adlinktech.vision:v1.0}\label{AcknowledgeTagGroup.json:table:Acknowledge}
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   id & UUID & STRING &  & Alarm ID for alarm being Acknowledged \\
+   stream\_id & UUID & STRING &  & Service ID publishing the Alarm ack. \\
+   acknowledge & N/A & BOOLEAN &  & State of alarm acknowledgement (True: Valid Alarm. False: Not valid) \\
+   message & n/a & STRING &  & Alarm information text \\
+\end{tabularx}
+\caption{Acknowledge:com.adlinktech.vision:v1.0: \textit{Toplevel Type (no explicit name given)}}\label{AcknowledgeTagGroup.json:table:Acknowledge-no-type-given}
+
+
+\end{table}
+
+\subsection{AlarmTagGroup.json}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{l X} 
+       \textbf{Name:} & Alarm \\ 
+	   \textbf{Context:} & com.adlinktech.vision \\ 
+	   \textbf{Version:} & v1.0 \\ 
+	   \textbf{Description:} & Alarms \& alert data stream \\ 
+	   \textbf{QoS:} & event \\
+	   \textbf{Toplevel Typename:} & \textit{No explicit name given} \\ 
+\end{tabularx}
+\caption{Alarm:com.adlinktech.vision:v1.0}\label{AlarmTagGroup.json:table:Alarm}
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   id & UUID & STRING &  & Alarm ID \\
+   stream\_id & UUID & STRING &  & Service ID publishing the Alarm \\
+   target & UUID & STRING &  & Target FlowID of the HMI where alarm will be displayed \\
+   level & com.vision.models.alarm.level & STRING &  & Alarm Level enum \\
+   timestamp & timestamp & STRING &  & Alarm Event Timestamp \\
+   message & n/a & STRING &  & Alarm information text \\
+   meta & N/A & STRING &  & Serialized value \\
+\end{tabularx}
+\caption{Alarm:com.adlinktech.vision:v1.0: \textit{Toplevel Type (no explicit name given)}}\label{AlarmTagGroup.json:table:Alarm-no-type-given}
+
+
+\end{table}
+
+\subsection{BinaryArtifactTagGroup.json}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{l X} 
+       \textbf{Name:} & BinaryArtifact \\ 
+	   \textbf{Context:} & com.adlinktech.vision \\ 
+	   \textbf{Version:} & v1.0 \\ 
+	   \textbf{Description:} & Message containing serialized file artifact \\ 
+	   \textbf{QoS:} & event \\
+	   \textbf{Toplevel Typename:} & \textit{No explicit name given} \\ 
+\end{tabularx}
+\caption{BinaryArtifact:com.adlinktech.vision:v1.0}\label{BinaryArtifactTagGroup.json:table:BinaryArtifact}
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   source & N/A & STRING &  & Artifact origin \\
+   target & N/A & STRING &  & (Optional) URI/ID of the intended recepient/use case \\
+   name & N/A & STRING &  & Artifact name \\
+   size & bytes & UINT64 &  & Data size \\
+   kind & N/A & STRING &  & Artifact description \\
+   timestamp & time & UINT64 &  & Updated/Created timestamp \\
+   data & n/a & BYTE\_SEQ &  & List of Detection Box Data (the results) \\
+\end{tabularx}
+\caption{BinaryArtifact:com.adlinktech.vision:v1.0: \textit{Toplevel Type (no explicit name given)}}\label{BinaryArtifactTagGroup.json:table:BinaryArtifact-no-type-given}
+
+
+\end{table}
+
+\subsection{CameraConnectRequestTagGroup.json}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{l X} 
+       \textbf{Name:} & CameraConnectRequest \\ 
+	   \textbf{Context:} & com.adlinktech.vision \\ 
+	   \textbf{Version:} & v1.0 \\ 
+	   \textbf{Description:} & Inference engine results for classification model \\ 
+	   \textbf{QoS:} & event \\
+	   \textbf{Toplevel Typename:} & \textit{No explicit name given} \\ 
+\end{tabularx}
+\caption{CameraConnectRequest:com.adlinktech.vision:v1.0}\label{CameraConnectRequestTagGroup.json:table:CameraConnectRequest}
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   id & n/a & STRING &  & Unique camera id \\
+   uri & n/a & STRING &  & Camera network URI \\
+   name & n/a & STRING &  & Camera network URI \\
+   action & n/a & STRING &  & ADD or REMOVE a network camera from a remote service \\
+   status & n/a & STRING &  & Status string of performed action \\
+   encoding & Enum & STRING &  & See com::vision::models::CompressionKind \\
+   port & Value & UINT32 &  & Port number \\
+\end{tabularx}
+\caption{CameraConnectRequest:com.adlinktech.vision:v1.0: \textit{Toplevel Type (no explicit name given)}}\label{CameraConnectRequestTagGroup.json:table:CameraConnectRequest-no-type-given}
+
+
+\end{table}
+
+\subsection{CaptureStartTagGroup.json}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{l X} 
+       \textbf{Name:} & CaptureStart \\ 
+	   \textbf{Context:} & com.adlinktech.vision \\ 
+	   \textbf{Version:} & v1.0 \\ 
+	   \textbf{Description:} & Perform a capture request for start. \\ 
+	   \textbf{QoS:} & event \\
+	   \textbf{Toplevel Typename:} & \textit{No explicit name given} \\ 
+\end{tabularx}
+\caption{CaptureStart:com.adlinktech.vision:v1.0}\label{CaptureStartTagGroup.json:table:CaptureStart}
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   StreamId & NA & STRING &  & The stream id would like to start \\
+   Timeout & NA & INT32 &  & Stream capture timeout time, 0 for no timeout. \\
+   NumberOfFrame & NA & INT32 &  & How manay frames per time unit, 0 means no downsampling \\
+   TimeUnit & NA & STRING &  & Time unit, could be Second/Minute/Hour \\
+\end{tabularx}
+\caption{CaptureStart:com.adlinktech.vision:v1.0: \textit{Toplevel Type (no explicit name given)}}\label{CaptureStartTagGroup.json:table:CaptureStart-no-type-given}
+
+
+\end{table}
+
+\subsection{CaptureStopTagGroup.json}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{l X} 
+       \textbf{Name:} & CaptureStop \\ 
+	   \textbf{Context:} & com.adlinktech.vision \\ 
+	   \textbf{Version:} & v1.0 \\ 
+	   \textbf{Description:} & Perform a capture request for stop. \\ 
+	   \textbf{QoS:} & event \\
+	   \textbf{Toplevel Typename:} & \textit{No explicit name given} \\ 
+\end{tabularx}
+\caption{CaptureStop:com.adlinktech.vision:v1.0}\label{CaptureStopTagGroup.json:table:CaptureStop}
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   StreamId & NA & STRING &  & The stream id would like to stop \\
+\end{tabularx}
+\caption{CaptureStop:com.adlinktech.vision:v1.0: \textit{Toplevel Type (no explicit name given)}}\label{CaptureStopTagGroup.json:table:CaptureStop-no-type-given}
+
+
+\end{table}
+
+\subsection{ClassificationTagGroup.json}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{l X} 
+       \textbf{Name:} & Classification \\ 
+	   \textbf{Context:} & com.adlinktech.vision \\ 
+	   \textbf{Version:} & v1.0 \\ 
+	   \textbf{Description:} & Inference engine results for classification model \\ 
+	   \textbf{QoS:} & telemetry \\
+	   \textbf{Toplevel Typename:} & \textit{No explicit name given} \\ 
+\end{tabularx}
+\caption{Classification:com.adlinktech.vision:v1.0}\label{ClassificationTagGroup.json:table:Classification}
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   index & n/a & INT32 &  & Classification index \\
+   output & n/a & STRING &  & Output type - used when classification model has multiple types of labels for each output index \\
+   label & n/a & STRING &  & Classification label name \\
+   probability & Percentage & FLOAT32 &  & Network confidence \\
+\end{tabularx}
+\caption{Classification:com.adlinktech.vision:v1.0: ClassificationData}\label{ClassificationTagGroup.json:table:Classification-ClassificationData}
+
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   engine\_id & UUID & STRING &  & Inference engine identifier \\
+   stream\_id & UUID & STRING &  & ID of the stream fed into the inference engine \\
+   frame\_id & NUM & UINT32 &  & ID of the input video frame fed to the inference engine \\
+   data & n/a & NVP\_SEQ & ClassificationData & List of Classification Data (the results) \\
+\end{tabularx}
+\caption{Classification:com.adlinktech.vision:v1.0: \textit{Toplevel Type (no explicit name given)}}\label{ClassificationTagGroup.json:table:Classification-no-type-given}
+
+
+\end{table}
+
+\subsection{ConfigActualTagGroup.json}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{l X} 
+       \textbf{Name:} & ConfigActual \\ 
+	   \textbf{Context:} & com.adlinktech.vision \\ 
+	   \textbf{Version:} & v1.0 \\ 
+	   \textbf{Description:} & Current values of configuration topic \\ 
+	   \textbf{QoS:} & state \\
+	   \textbf{Toplevel Typename:} & \textit{No explicit name given} \\ 
+\end{tabularx}
+\caption{ConfigActual:com.adlinktech.vision:v1.0}\label{ConfigActualTagGroup.json:table:ConfigActual}
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   type & n/a & STRING &  & Config Request Type \\
+   payload & n/a & STRING &  & Current config values \\
+\end{tabularx}
+\caption{ConfigActual:com.adlinktech.vision:v1.0: ConfigData}\label{ConfigActualTagGroup.json:table:ConfigActual-ConfigData}
+
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   source & UUID & STRING &  & Application ID effecting the config request \\
+   data & n/a & NVP\_SEQ & ConfigData & List of Detection Box Data (the results) \\
+\end{tabularx}
+\caption{ConfigActual:com.adlinktech.vision:v1.0: \textit{Toplevel Type (no explicit name given)}}\label{ConfigActualTagGroup.json:table:ConfigActual-no-type-given}
+
+
+\end{table}
+
+\subsection{ConfigRequestTagGroup.json}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{l X} 
+       \textbf{Name:} & ConfigRequest \\ 
+	   \textbf{Context:} & com.adlinktech.vision \\ 
+	   \textbf{Version:} & v1.0 \\ 
+	   \textbf{Description:} & Requested configuration for config effector \\ 
+	   \textbf{QoS:} & event \\
+	   \textbf{Toplevel Typename:} & \textit{No explicit name given} \\ 
+\end{tabularx}
+\caption{ConfigRequest:com.adlinktech.vision:v1.0}\label{ConfigRequestTagGroup.json:table:ConfigRequest}
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   id & UUID & STRING &  & Target host id to effect the config request \\
+   request & n/a & UINT32 &  & Request ID \\
+   type & n/a & STRING &  & Config Request Type \\
+   payload & n/a & STRING &  & Request data \\
+\end{tabularx}
+\caption{ConfigRequest:com.adlinktech.vision:v1.0: \textit{Toplevel Type (no explicit name given)}}\label{ConfigRequestTagGroup.json:table:ConfigRequest-no-type-given}
+
+
+\end{table}
+
+\subsection{DetectionBoxTagGroup.json}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{l X} 
+       \textbf{Name:} & DetectionBox \\ 
+	   \textbf{Context:} & com.adlinktech.vision \\ 
+	   \textbf{Version:} & v1.0 \\ 
+	   \textbf{Description:} & Inference engine results for object detection model outputing bounding boxes \\ 
+	   \textbf{QoS:} & telemetry \\
+	   \textbf{Toplevel Typename:} & \textit{No explicit name given} \\ 
+\end{tabularx}
+\caption{DetectionBox:com.adlinktech.vision:v1.0}\label{DetectionBoxTagGroup.json:table:DetectionBox}
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   obj\_id & UUID & INT32 &  & Detected object id \\
+   obj\_label & UUID & STRING &  & Detected object proper name \\
+   class\_id & UUID & INT32 &  & Detected object's classification type as raw id \\
+   class\_label & UUID & STRING &  & Detected object's classification as proper name \\
+   x1 & Percentage & FLOAT32 &  & Top Left X Coordinate (\% from 0,0) \\
+   y1 & Percentage & FLOAT32 &  & Top Left Y Coordinate (\% from 0,0) \\
+   x2 & Percentage & FLOAT32 &  & Bottom Right X Coordinate (\% from 0,0) \\
+   y2 & Percentage & FLOAT32 &  & Bottom Right Y Coordinate (\% from 0,0) \\
+   probability & Percentage & FLOAT32 &  & Network confidence \\
+   meta & N/A & STRING &  & Buffer for extra inference metadata \\
+\end{tabularx}
+\caption{DetectionBox:com.adlinktech.vision:v1.0: DetectionBoxData}\label{DetectionBoxTagGroup.json:table:DetectionBox-DetectionBoxData}
+
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   engine\_id & UUID & STRING &  & Inference engine identifier \\
+   stream\_id & UUID & STRING &  & ID of the stream fed into the inference engine \\
+   frame\_id & NUM & UINT32 &  & ID of the input video frame fed to the inference engine \\
+   data & n/a & NVP\_SEQ & DetectionBoxData & List of Detection Box Data (the results) \\
+\end{tabularx}
+\caption{DetectionBox:com.adlinktech.vision:v1.0: \textit{Toplevel Type (no explicit name given)}}\label{DetectionBoxTagGroup.json:table:DetectionBox-no-type-given}
+
+
+\end{table}
+
+\subsection{DetectionPointTagGroup.json}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{l X} 
+       \textbf{Name:} & DetectionPoint \\ 
+	   \textbf{Context:} & com.adlinktech.vision \\ 
+	   \textbf{Version:} & v1.0 \\ 
+	   \textbf{Description:} & Inference engine results for object detection model outputing points \\ 
+	   \textbf{QoS:} & telemetry \\
+	   \textbf{Toplevel Typename:} & \textit{No explicit name given} \\ 
+\end{tabularx}
+\caption{DetectionPoint:com.adlinktech.vision:v1.0}\label{DetectionPointTagGroup.json:table:DetectionPoint}
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   obj\_id & UUID & INT32 &  & Detected object id \\
+   obj\_label & UUID & STRING &  & Detected object proper name \\
+   class\_id & UUID & INT32 &  & Detected object's classification type as raw id \\
+   class\_label & UUID & STRING &  & Detected object's classification as proper name \\
+   x & Percentage & FLOAT32 &  & Center X Coordinate (\% from 0,0) \\
+   y & Percentage & FLOAT32 &  & Center Y Coordinate (\% from 0,0) \\
+   radius & Percentage & FLOAT32 &  & Size of the point (\% of image width) \\
+   probability & Percentage & FLOAT32 &  & Network confidence \\
+   meta & N/A & STRING &  & Buffer for extra inference metadata \\
+\end{tabularx}
+\caption{DetectionPoint:com.adlinktech.vision:v1.0: DetectionPointData}\label{DetectionPointTagGroup.json:table:DetectionPoint-DetectionPointData}
+
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   engine\_id & UUID & STRING &  & Inference engine identifier \\
+   stream\_id & UUID & STRING &  & ID of the stream fed into the inference engine \\
+   frame\_id & NUM & UINT32 &  & ID of the input video frame fed to the inference engine \\
+   data & n/a & NVP\_SEQ & DetectionPointData & List of Detection Point Data (the results) \\
+\end{tabularx}
+\caption{DetectionPoint:com.adlinktech.vision:v1.0: \textit{Toplevel Type (no explicit name given)}}\label{DetectionPointTagGroup.json:table:DetectionPoint-no-type-given}
+
+
+\end{table}
+
+\subsection{DeviceErrorTagGroup.json}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{l X} 
+       \textbf{Name:} & DeviceError \\ 
+	   \textbf{Context:} & com.adlinktech.vision \\ 
+	   \textbf{Version:} & v1.0 \\ 
+	   \textbf{Description:} & Device error log \\ 
+	   \textbf{QoS:} & event \\
+	   \textbf{Toplevel Typename:} & \textit{No explicit name given} \\ 
+\end{tabularx}
+\caption{DeviceError:com.adlinktech.vision:v1.0}\label{DeviceErrorTagGroup.json:table:DeviceError}
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   device\_id & UUID & STRING &  & Publishing Device \\
+   message & n/a & STRING &  & Concise error message \\
+   error\_id & n/a & INT32 &  & Error identifier \\
+   description & n/a & STRING &  & Error description \\
+\end{tabularx}
+\caption{DeviceError:com.adlinktech.vision:v1.0: \textit{Toplevel Type (no explicit name given)}}\label{DeviceErrorTagGroup.json:table:DeviceError-no-type-given}
+
+
+\end{table}
+
+\subsection{DeviceInfoTagGroup.json}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{l X} 
+       \textbf{Name:} & DeviceInfo \\ 
+	   \textbf{Context:} & com.adlinktech.vision \\ 
+	   \textbf{Version:} & v1.0 \\ 
+	   \textbf{Description:} & Vision Device properties \\ 
+	   \textbf{QoS:} & state \\
+	   \textbf{Toplevel Typename:} & \textit{No explicit name given} \\ 
+\end{tabularx}
+\caption{DeviceInfo:com.adlinktech.vision:v1.0}\label{DeviceInfoTagGroup.json:table:DeviceInfo}
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   stream\_id & UUID & STRING &  & Stream publisher ID \\
+   mac\_address & n/a & STRING &  & Host address \\
+   ip\_address & n/a & STRING &  & Host machine IP Address \\
+   port & n/a & INT32 &  & Connection port (optional) \\
+   uri & n/a & STRING &  & Video Interface URI (rtsp://xx/h264) \\
+   manufacturer & n/a & STRING &  & Vision Device manufacturer \\
+   model & n/a & STRING &  & Vision Device model \\
+   serial & n/a & STRING &  & Vision Device serial identifier \\
+   fw\_version & n/a & STRING &  & Vision Device firmware version \\
+   dev\_id & n/a & STRING &  & Vision Device host interface (ex. /dev/video0 or /dev/ttyUSB0) \\
+   status & DeviceStatus & STRING &  & DeviceStatus enum \\
+   kind & DeviceKind & STRING &  & Vision device kind enum \\
+   protocol & ProtocolKind & STRING &  & ProtocolKind enum describing how the device communicates \\
+\end{tabularx}
+\caption{DeviceInfo:com.adlinktech.vision:v1.0: \textit{Toplevel Type (no explicit name given)}}\label{DeviceInfoTagGroup.json:table:DeviceInfo-no-type-given}
+
+
+\end{table}
+
+\subsection{EngineConfigTagGroup.json}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{l X} 
+       \textbf{Name:} & EngineConfig \\ 
+	   \textbf{Context:} & com.adlinktech.vision \\ 
+	   \textbf{Version:} & v1.0 \\ 
+	   \textbf{Description:} & Inference Engine Publishes its current \& desired configuration \\ 
+	   \textbf{QoS:} & state \\
+	   \textbf{Toplevel Typename:} & \textit{No explicit name given} \\ 
+\end{tabularx}
+\caption{EngineConfig:com.adlinktech.vision:v1.0}\label{EngineConfigTagGroup.json:table:EngineConfig}
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   width & pixels & UINT32 &  & Expected input image width \\
+   height & pixels & UINT32 &  & Expected input image height \\
+   channels & n/a & UINT32 &  & Expected input image channel count \\
+   format & PixelFormat & STRING &  & Expected input image pixel format. See com::vision::models::PixelFormat \\
+   crop & N/A & BOOLEAN &  & Declares whether the input image should be cropped to width \& height \\
+   resize & N/A & BOOLEAN &  & Declares whether the input image should be resized to width \& height \\
+   roi\_x1 & pixels & UINT32 &  & Declares Top-Left X position of Region of Interest if image should be croppped \\
+   roi\_y1 & pixels & UINT32 &  & Declares Top-Left Y position of Region of Interest if image should be croppped \\
+   framerate & fps & FLOAT32 &  & Specifies the configured/expected framerate for input images treams \\
+\end{tabularx}
+\caption{EngineConfig:com.adlinktech.vision:v1.0: ImageConfig}\label{EngineConfigTagGroup.json:table:EngineConfig-ImageConfig}
+
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   model\_type & ModelType & STRING &  & Loaded model type see com::vision::models::ModelConfig \\
+   model\_name & n/a & STRING &  & Human readable name of the loaded model \\
+   mode & PrecisionMode & STRING &  & Loaded model precision. See com::vision::models::PrecisionMode \\
+   threshold & Percentage & FLOAT32 &  & Configured confidence/probability threshold \\
+   nms\_threshold & Percentage & FLOAT32 &  & Configured Non-Maximum Supression Threshold \\
+   batch\_size & Number & UINT32 &  & Configured number of samples sent through the network \\
+   output\_type & ModelOutputType & STRING &  & Configured inference output types see com::vision::models::ModelOutputType \\
+\end{tabularx}
+\caption{EngineConfig:com.adlinktech.vision:v1.0: ModelConfig}\label{EngineConfigTagGroup.json:table:EngineConfig-ModelConfig}
+
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   engine\_id & UUID & STRING &  & Publishing inference engine identifer \\
+   name & n/a & STRING &  & Proper name of the inference engine \\
+   source & n/a & STRING &  & Producer of the inference engine \\
+   version & n/a & STRING &  & Inference engine revision \\
+   kind & com.vision.models.inference.EngineKind & STRING &  & Inference engine kind \\
+   image & n/a & NVP\_SEQ & ImageConfig & Configured input image expectations \\
+   model & n/a & NVP\_SEQ & ModelConfig & Configured (loaded) model metadata \\
+\end{tabularx}
+\caption{EngineConfig:com.adlinktech.vision:v1.0: \textit{Toplevel Type (no explicit name given)}}\label{EngineConfigTagGroup.json:table:EngineConfig-no-type-given}
+
+
+\end{table}
+
+\subsection{EngineInfoTagGroup.json}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{l X} 
+       \textbf{Name:} & EngineInfo \\ 
+	   \textbf{Context:} & com.adlinktech.vision \\ 
+	   \textbf{Version:} & v1.0 \\ 
+	   \textbf{Description:} & Inference Engine State \& Info \\ 
+	   \textbf{QoS:} & state \\
+	   \textbf{Toplevel Typename:} & \textit{No explicit name given} \\ 
+\end{tabularx}
+\caption{EngineInfo:com.adlinktech.vision:v1.0}\label{EngineInfoTagGroup.json:table:EngineInfo}
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   engine\_id & UUID & STRING &  & Inference engine identifier \\
+   state & EngineState & STRING &  & UNKNOWN | ONLINE | WORKING | OFFLINE \\
+\end{tabularx}
+\caption{EngineInfo:com.adlinktech.vision:v1.0: \textit{Toplevel Type (no explicit name given)}}\label{EngineInfoTagGroup.json:table:EngineInfo-no-type-given}
+
+
+\end{table}
+
+\subsection{ModelReceiverStatusTagGroup.json}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{l X} 
+       \textbf{Name:} & ModelReceiverStatus \\ 
+	   \textbf{Context:} & com.adlinktech.vision \\ 
+	   \textbf{Version:} & v1.0 \\ 
+	   \textbf{Description:} & Broadcasts the state of the Inference Engine Model Receiver config status \\ 
+	   \textbf{QoS:} & state \\
+	   \textbf{Toplevel Typename:} & \textit{No explicit name given} \\ 
+\end{tabularx}
+\caption{ModelReceiverStatus:com.adlinktech.vision:v1.0}\label{ModelReceiverStatusTagGroup.json:table:ModelReceiverStatus}
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   engine\_id & UUID & STRING &  & Source engine identifier \\
+   use\_data\_river & N/A & BOOLEAN &  & State of the BinaryArtifact data interface - Is it available? \\
+   use\_rest & N/A & BOOLEAN &  & State of the REST Server - Is it available? \\
+   rest\_hostname & N/A & STRING &  & Inference engine model receiver REST server hostname or IP Address \\
+   rest\_port & N/A & STRING &  & Inference engine model receiver REST server port \\
+   rest\_path & N/A & STRING &  & Inference engine model receiver REST server endpoint \\
+   rest\_user & N/A & STRING &  & Inference engine model receiver REST server username \\
+   rest\_password & N/A & STRING &  & Inference engine model receiver REST server password \\
+\end{tabularx}
+\caption{ModelReceiverStatus:com.adlinktech.vision:v1.0: \textit{Toplevel Type (no explicit name given)}}\label{ModelReceiverStatusTagGroup.json:table:ModelReceiverStatus-no-type-given}
+
+
+\end{table}
+
+\subsection{OutputTensorTagGroup.json}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{l X} 
+       \textbf{Name:} & OutputTensor \\ 
+	   \textbf{Context:} & com.adlinktech.vision \\ 
+	   \textbf{Version:} & v1.0 \\ 
+	   \textbf{Description:} & Generic inference engine results for any model \\ 
+	   \textbf{QoS:} & telemetry \\
+	   \textbf{Toplevel Typename:} & \textit{No explicit name given} \\ 
+\end{tabularx}
+\caption{OutputTensor:com.adlinktech.vision:v1.0}\label{OutputTensorTagGroup.json:table:OutputTensor}
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   index & length & UINT32 &  & Output tensor index \\
+   output & length & UINT32 &  & Named output tensor \\
+   rank & length & UINT32\_SEQ &  & Size of output tensor dimension data \\
+   data & raw & FLOAT32\_SEQ &  & Data for specified dimension \\
+   data\_type & com.vision.models.PrecisionMode & STRING &  & Precision of data sequence \\
+\end{tabularx}
+\caption{OutputTensor:com.adlinktech.vision:v1.0: TensorData}\label{OutputTensorTagGroup.json:table:OutputTensor-TensorData}
+
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   stream\_id & UUID & STRING &  & ID of the stream fed into the inference engine \\
+   engine\_id & UUID & STRING &  & Inference engine identifier \\
+   frame\_id & NUM & UINT32 &  & ID of the input video frame fed to the inference engine \\
+   dimensions & index & UINT32\_SEQ &  & Total number of dimensions in output tensor \\
+   data & n/a & NVP\_SEQ & TensorData & List of OutputTensor Data (the results) \\
+\end{tabularx}
+\caption{OutputTensor:com.adlinktech.vision:v1.0: \textit{Toplevel Type (no explicit name given)}}\label{OutputTensorTagGroup.json:table:OutputTensor-no-type-given}
+
+
+\end{table}
+
+\subsection{PerformanceTagGroup.json}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{l X} 
+       \textbf{Name:} & Performance \\ 
+	   \textbf{Context:} & com.adlinktech.vision \\ 
+	   \textbf{Version:} & v1.0 \\ 
+	   \textbf{Description:} & Inference Engine processing performance update \\ 
+	   \textbf{QoS:} & bestEffortTelemetry \\
+	   \textbf{Toplevel Typename:} & \textit{No explicit name given} \\ 
+\end{tabularx}
+\caption{Performance:com.adlinktech.vision:v1.0}\label{PerformanceTagGroup.json:table:Performance}
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   engine\_id & UUID & STRING &  & Inference engine identifier \\
+   stream\_id & UUID & STRING &  & Stream publisher ID \\
+   frame\_id & NUM & UINT32 &  & Frame sample ID \\
+   delay & milliseconds & UINT32 &  & Inference processing time \\
+\end{tabularx}
+\caption{Performance:com.adlinktech.vision:v1.0: \textit{Toplevel Type (no explicit name given)}}\label{PerformanceTagGroup.json:table:Performance-no-type-given}
+
+
+\end{table}
+
+\subsection{SegmentationTagGroup.json}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{l X} 
+       \textbf{Name:} & Segmentation \\ 
+	   \textbf{Context:} & com.adlinktech.vision \\ 
+	   \textbf{Version:} & v1.0 \\ 
+	   \textbf{Description:} & Inference engine results for classification model \\ 
+	   \textbf{QoS:} & telemetry \\
+	   \textbf{Toplevel Typename:} & \textit{No explicit name given} \\ 
+\end{tabularx}
+\caption{Segmentation:com.adlinktech.vision:v1.0}\label{SegmentationTagGroup.json:table:Segmentation}
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   id & UUID & INT32 &  & Segmentation mask index/id \\
+   width & pixels & INT32 &  & Segmentation mask frame width \\
+   height & pixels & INT32 &  & Segmentation mask frame height \\
+   size & bytes & INT32 &  & Segmentation mask payload size (bytes) \\
+   channel & index & INT32 &  & Segmentation mask output channel \\
+   color & Color & STRING &  & Segmentation mask color (\#XXXXXX) \\
+   label & UUID & STRING &  & Classification label name \\
+   probability & Percentage & FLOAT32 &  & Network confidence \\
+   data & bytes & BYTE\_SEQ &  & Segmentation mask frame data \\
+\end{tabularx}
+\caption{Segmentation:com.adlinktech.vision:v1.0: SegmentationData}\label{SegmentationTagGroup.json:table:Segmentation-SegmentationData}
+
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   engine\_id & UUID & STRING &  & Inference engine identifier \\
+   stream\_id & UUID & STRING &  & ID of the stream fed into the inference engine \\
+   frame\_id & NUM & UINT32 &  & ID of the input video frame fed to the inference engine \\
+   inference\_id & NUM & UINT32 &  & Segmentation mask instance in the result array \\
+   data & n/a & NVP\_SEQ & SegmentationData & List of Segmentation Data (the results) \\
+\end{tabularx}
+\caption{Segmentation:com.adlinktech.vision:v1.0: \textit{Toplevel Type (no explicit name given)}}\label{SegmentationTagGroup.json:table:Segmentation-no-type-given}
+
+
+\end{table}
+
+\subsection{StreamRequestTagGroup.json}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{l X} 
+       \textbf{Name:} & StreamRequest \\ 
+	   \textbf{Context:} & com.adlinktech.vision \\ 
+	   \textbf{Version:} & v1.0 \\ 
+	   \textbf{Description:} & Request model for initating device video streams \\ 
+	   \textbf{QoS:} & event \\
+	   \textbf{Toplevel Typename:} & \textit{No explicit name given} \\ 
+\end{tabularx}
+\caption{StreamRequest:com.adlinktech.vision:v1.0}\label{StreamRequestTagGroup.json:table:StreamRequest}
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   stream\_id & UUID & STRING &  & ID of the stream to control \\
+   enable\_stream & n/a & BOOLEAN &  & Enable or disable the stream \\
+   framerate & frames per second & FLOAT32 &  & Specify the framerate that should be streamed \\
+\end{tabularx}
+\caption{StreamRequest:com.adlinktech.vision:v1.0: \textit{Toplevel Type (no explicit name given)}}\label{StreamRequestTagGroup.json:table:StreamRequest-no-type-given}
+
+
+\end{table}
+
+\subsection{TrainingStreamerConfigTagGroup.json}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{l X} 
+       \textbf{Name:} & TrainingStreamerConfig \\ 
+	   \textbf{Context:} & com.adlinktech.vision \\ 
+	   \textbf{Version:} & v1.0 \\ 
+	   \textbf{Description:} & Reports if a training streamer status is change. \\ 
+	   \textbf{QoS:} & state \\
+	   \textbf{Toplevel Typename:} & \textit{No explicit name given} \\ 
+\end{tabularx}
+\caption{TrainingStreamerConfig:com.adlinktech.vision:v1.0}\label{TrainingStreamerConfigTagGroup.json:table:TrainingStreamerConfig}
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   StreamId & NA & STRING &  & Stream id \\
+   Status & NA & BOOLEAN &  & on (true) or off (false) \\
+   NumberOfFrame & NA & INT32 &  & Number of frames per time unit, 0 means no downsampling \\
+   TimeUnit & NA & STRING &  & Time unit, could be Second/Minute/Hour \\
+\end{tabularx}
+\caption{TrainingStreamerConfig:com.adlinktech.vision:v1.0: StreamInfo}\label{TrainingStreamerConfigTagGroup.json:table:TrainingStreamerConfig-StreamInfo}
+
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   FrameStorage & NA & STRING &  & Save location in local or remote. \\
+   StreamId & NA & NVP\_SEQ & StreamInfo & List of stream id \\
+\end{tabularx}
+\caption{TrainingStreamerConfig:com.adlinktech.vision:v1.0: \textit{Toplevel Type (no explicit name given)}}\label{TrainingStreamerConfigTagGroup.json:table:TrainingStreamerConfig-no-type-given}
+
+
+\end{table}
+
+\subsection{VideoFrameTagGroup.json}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{l X} 
+       \textbf{Name:} & VideoFrame \\ 
+	   \textbf{Context:} & com.adlinktech.vision \\ 
+	   \textbf{Version:} & v1.0 \\ 
+	   \textbf{Description:} & Video frame sample \\ 
+	   \textbf{QoS:} & video \\
+	   \textbf{Toplevel Typename:} & \textit{No explicit name given} \\ 
+\end{tabularx}
+\caption{VideoFrame:com.adlinktech.vision:v1.0}\label{VideoFrameTagGroup.json:table:VideoFrame}
+\bigskip
+\begin{tabularx}{\textwidth}{l l l l X} 
+	 \textbf{Name} & \textbf{Unit} & \textbf{Type} & \textbf{Subtype} & \textbf{Description} \\
+	 \midrule
+   stream\_id & UUID & STRING &  & Stream publisher ID \\
+   frame\_id & NUM & UINT32 &  & Frame sample ID \\
+   timestamp & time & INT64 &  & Time of image capture event \\
+   data & Frame data & BYTE\_SEQ &  & Video frame data \\
+   width & Pixels & UINT32 &  & Frame width \\
+   height & Pixels & UINT32 &  & Frame height \\
+   channels & Number of channels & UINT32 &  & Channels \\
+   size & Size & UINT32 &  & Data size \\
+   format & PixelFormat & STRING &  & Pixel format using OpenCV Definitions \\
+   compression & CompressionKind & STRING &  & Compression technology used for video frame \\
+   framerate & fps & FLOAT32 &  & Frame transmission frequency \\
+\end{tabularx}
+\caption{VideoFrame:com.adlinktech.vision:v1.0: \textit{Toplevel Type (no explicit name given)}}\label{VideoFrameTagGroup.json:table:VideoFrame-no-type-given}
+
+
+\end{table}
+
+\section{TagGroup Definition Cross-Reference}
+     \begin{longtable}[Hl]{l l} 
+	 \caption{TagGroup Definition Cross-Reference}\label{tab:TagGroupDefinitionCrossReference}\\
+	 \textbf{TagGroup} & \textbf{Filename} \\
+	 \midrule\endhead
+AITagGroup:com.adlinktech.ai:v1.0 & AITagGroup.json \\
+Acknowledge:com.adlinktech.vision:v1.0 & AcknowledgeTagGroup.json \\
+Acknowledge:com.adlinktech.vision:v1.0 & AlarmTagGroup.json \\
+Acknowledge:com.adlinktech.vision:v1.0 & BinaryArtifactTagGroup.json \\
+Acknowledge:com.adlinktech.vision:v1.0 & CameraConnectRequestTagGroup.json \\
+Acknowledge:com.adlinktech.vision:v1.0 & CaptureStartTagGroup.json \\
+Acknowledge:com.adlinktech.vision:v1.0 & CaptureStopTagGroup.json \\
+Acknowledge:com.adlinktech.vision:v1.0 & ClassificationTagGroup.json \\
+Acknowledge:com.adlinktech.vision:v1.0 & ConfigActualTagGroup.json \\
+Acknowledge:com.adlinktech.vision:v1.0 & ConfigRequestTagGroup.json \\
+Acknowledge:com.adlinktech.vision:v1.0 & DetectionBoxTagGroup.json \\
+Acknowledge:com.adlinktech.vision:v1.0 & DetectionPointTagGroup.json \\
+Acknowledge:com.adlinktech.vision:v1.0 & DeviceErrorTagGroup.json \\
+Acknowledge:com.adlinktech.vision:v1.0 & DeviceInfoTagGroup.json \\
+Acknowledge:com.adlinktech.vision:v1.0 & EngineConfigTagGroup.json \\
+Acknowledge:com.adlinktech.vision:v1.0 & EngineInfoTagGroup.json \\
+Acknowledge:com.adlinktech.vision:v1.0 & ModelReceiverStatusTagGroup.json \\
+Acknowledge:com.adlinktech.vision:v1.0 & OutputTensorTagGroup.json \\
+Acknowledge:com.adlinktech.vision:v1.0 & PerformanceTagGroup.json \\
+Acknowledge:com.adlinktech.vision:v1.0 & SegmentationTagGroup.json \\
+Acknowledge:com.adlinktech.vision:v1.0 & StreamRequestTagGroup.json \\
+Acknowledge:com.adlinktech.vision:v1.0 & TrainingStreamerConfigTagGroup.json \\
+Acknowledge:com.adlinktech.vision:v1.0 & VideoFrameTagGroup.json \\
+Alarm:com.adlinktech.vision:v1.0 & AlarmTagGroup.json \\
+Alarm:com.adlinktech.vision:v1.0 & BinaryArtifactTagGroup.json \\
+Alarm:com.adlinktech.vision:v1.0 & CameraConnectRequestTagGroup.json \\
+Alarm:com.adlinktech.vision:v1.0 & CaptureStartTagGroup.json \\
+Alarm:com.adlinktech.vision:v1.0 & CaptureStopTagGroup.json \\
+Alarm:com.adlinktech.vision:v1.0 & ClassificationTagGroup.json \\
+Alarm:com.adlinktech.vision:v1.0 & ConfigActualTagGroup.json \\
+Alarm:com.adlinktech.vision:v1.0 & ConfigRequestTagGroup.json \\
+Alarm:com.adlinktech.vision:v1.0 & DetectionBoxTagGroup.json \\
+Alarm:com.adlinktech.vision:v1.0 & DetectionPointTagGroup.json \\
+Alarm:com.adlinktech.vision:v1.0 & DeviceErrorTagGroup.json \\
+Alarm:com.adlinktech.vision:v1.0 & DeviceInfoTagGroup.json \\
+Alarm:com.adlinktech.vision:v1.0 & EngineConfigTagGroup.json \\
+Alarm:com.adlinktech.vision:v1.0 & EngineInfoTagGroup.json \\
+Alarm:com.adlinktech.vision:v1.0 & ModelReceiverStatusTagGroup.json \\
+Alarm:com.adlinktech.vision:v1.0 & OutputTensorTagGroup.json \\
+Alarm:com.adlinktech.vision:v1.0 & PerformanceTagGroup.json \\
+Alarm:com.adlinktech.vision:v1.0 & SegmentationTagGroup.json \\
+Alarm:com.adlinktech.vision:v1.0 & StreamRequestTagGroup.json \\
+Alarm:com.adlinktech.vision:v1.0 & TrainingStreamerConfigTagGroup.json \\
+Alarm:com.adlinktech.vision:v1.0 & VideoFrameTagGroup.json \\
+BinaryArtifact:com.adlinktech.vision:v1.0 & BinaryArtifactTagGroup.json \\
+BinaryArtifact:com.adlinktech.vision:v1.0 & CameraConnectRequestTagGroup.json \\
+BinaryArtifact:com.adlinktech.vision:v1.0 & CaptureStartTagGroup.json \\
+BinaryArtifact:com.adlinktech.vision:v1.0 & CaptureStopTagGroup.json \\
+BinaryArtifact:com.adlinktech.vision:v1.0 & ClassificationTagGroup.json \\
+BinaryArtifact:com.adlinktech.vision:v1.0 & ConfigActualTagGroup.json \\
+BinaryArtifact:com.adlinktech.vision:v1.0 & ConfigRequestTagGroup.json \\
+BinaryArtifact:com.adlinktech.vision:v1.0 & DetectionBoxTagGroup.json \\
+BinaryArtifact:com.adlinktech.vision:v1.0 & DetectionPointTagGroup.json \\
+BinaryArtifact:com.adlinktech.vision:v1.0 & DeviceErrorTagGroup.json \\
+BinaryArtifact:com.adlinktech.vision:v1.0 & DeviceInfoTagGroup.json \\
+BinaryArtifact:com.adlinktech.vision:v1.0 & EngineConfigTagGroup.json \\
+BinaryArtifact:com.adlinktech.vision:v1.0 & EngineInfoTagGroup.json \\
+BinaryArtifact:com.adlinktech.vision:v1.0 & ModelReceiverStatusTagGroup.json \\
+BinaryArtifact:com.adlinktech.vision:v1.0 & OutputTensorTagGroup.json \\
+BinaryArtifact:com.adlinktech.vision:v1.0 & PerformanceTagGroup.json \\
+BinaryArtifact:com.adlinktech.vision:v1.0 & SegmentationTagGroup.json \\
+BinaryArtifact:com.adlinktech.vision:v1.0 & StreamRequestTagGroup.json \\
+BinaryArtifact:com.adlinktech.vision:v1.0 & TrainingStreamerConfigTagGroup.json \\
+BinaryArtifact:com.adlinktech.vision:v1.0 & VideoFrameTagGroup.json \\
+CameraConnectRequest:com.adlinktech.vision:v1.0 & CameraConnectRequestTagGroup.json \\
+CameraConnectRequest:com.adlinktech.vision:v1.0 & CaptureStartTagGroup.json \\
+CameraConnectRequest:com.adlinktech.vision:v1.0 & CaptureStopTagGroup.json \\
+CameraConnectRequest:com.adlinktech.vision:v1.0 & ClassificationTagGroup.json \\
+CameraConnectRequest:com.adlinktech.vision:v1.0 & ConfigActualTagGroup.json \\
+CameraConnectRequest:com.adlinktech.vision:v1.0 & ConfigRequestTagGroup.json \\
+CameraConnectRequest:com.adlinktech.vision:v1.0 & DetectionBoxTagGroup.json \\
+CameraConnectRequest:com.adlinktech.vision:v1.0 & DetectionPointTagGroup.json \\
+CameraConnectRequest:com.adlinktech.vision:v1.0 & DeviceErrorTagGroup.json \\
+CameraConnectRequest:com.adlinktech.vision:v1.0 & DeviceInfoTagGroup.json \\
+CameraConnectRequest:com.adlinktech.vision:v1.0 & EngineConfigTagGroup.json \\
+CameraConnectRequest:com.adlinktech.vision:v1.0 & EngineInfoTagGroup.json \\
+CameraConnectRequest:com.adlinktech.vision:v1.0 & ModelReceiverStatusTagGroup.json \\
+CameraConnectRequest:com.adlinktech.vision:v1.0 & OutputTensorTagGroup.json \\
+CameraConnectRequest:com.adlinktech.vision:v1.0 & PerformanceTagGroup.json \\
+CameraConnectRequest:com.adlinktech.vision:v1.0 & SegmentationTagGroup.json \\
+CameraConnectRequest:com.adlinktech.vision:v1.0 & StreamRequestTagGroup.json \\
+CameraConnectRequest:com.adlinktech.vision:v1.0 & TrainingStreamerConfigTagGroup.json \\
+CameraConnectRequest:com.adlinktech.vision:v1.0 & VideoFrameTagGroup.json \\
+CaptureStart:com.adlinktech.vision:v1.0 & CaptureStartTagGroup.json \\
+CaptureStart:com.adlinktech.vision:v1.0 & CaptureStopTagGroup.json \\
+CaptureStart:com.adlinktech.vision:v1.0 & ClassificationTagGroup.json \\
+CaptureStart:com.adlinktech.vision:v1.0 & ConfigActualTagGroup.json \\
+CaptureStart:com.adlinktech.vision:v1.0 & ConfigRequestTagGroup.json \\
+CaptureStart:com.adlinktech.vision:v1.0 & DetectionBoxTagGroup.json \\
+CaptureStart:com.adlinktech.vision:v1.0 & DetectionPointTagGroup.json \\
+CaptureStart:com.adlinktech.vision:v1.0 & DeviceErrorTagGroup.json \\
+CaptureStart:com.adlinktech.vision:v1.0 & DeviceInfoTagGroup.json \\
+CaptureStart:com.adlinktech.vision:v1.0 & EngineConfigTagGroup.json \\
+CaptureStart:com.adlinktech.vision:v1.0 & EngineInfoTagGroup.json \\
+CaptureStart:com.adlinktech.vision:v1.0 & ModelReceiverStatusTagGroup.json \\
+CaptureStart:com.adlinktech.vision:v1.0 & OutputTensorTagGroup.json \\
+CaptureStart:com.adlinktech.vision:v1.0 & PerformanceTagGroup.json \\
+CaptureStart:com.adlinktech.vision:v1.0 & SegmentationTagGroup.json \\
+CaptureStart:com.adlinktech.vision:v1.0 & StreamRequestTagGroup.json \\
+CaptureStart:com.adlinktech.vision:v1.0 & TrainingStreamerConfigTagGroup.json \\
+CaptureStart:com.adlinktech.vision:v1.0 & VideoFrameTagGroup.json \\
+CaptureStop:com.adlinktech.vision:v1.0 & CaptureStopTagGroup.json \\
+CaptureStop:com.adlinktech.vision:v1.0 & ClassificationTagGroup.json \\
+CaptureStop:com.adlinktech.vision:v1.0 & ConfigActualTagGroup.json \\
+CaptureStop:com.adlinktech.vision:v1.0 & ConfigRequestTagGroup.json \\
+CaptureStop:com.adlinktech.vision:v1.0 & DetectionBoxTagGroup.json \\
+CaptureStop:com.adlinktech.vision:v1.0 & DetectionPointTagGroup.json \\
+CaptureStop:com.adlinktech.vision:v1.0 & DeviceErrorTagGroup.json \\
+CaptureStop:com.adlinktech.vision:v1.0 & DeviceInfoTagGroup.json \\
+CaptureStop:com.adlinktech.vision:v1.0 & EngineConfigTagGroup.json \\
+CaptureStop:com.adlinktech.vision:v1.0 & EngineInfoTagGroup.json \\
+CaptureStop:com.adlinktech.vision:v1.0 & ModelReceiverStatusTagGroup.json \\
+CaptureStop:com.adlinktech.vision:v1.0 & OutputTensorTagGroup.json \\
+CaptureStop:com.adlinktech.vision:v1.0 & PerformanceTagGroup.json \\
+CaptureStop:com.adlinktech.vision:v1.0 & SegmentationTagGroup.json \\
+CaptureStop:com.adlinktech.vision:v1.0 & StreamRequestTagGroup.json \\
+CaptureStop:com.adlinktech.vision:v1.0 & TrainingStreamerConfigTagGroup.json \\
+CaptureStop:com.adlinktech.vision:v1.0 & VideoFrameTagGroup.json \\
+Classification:com.adlinktech.vision:v1.0 & ClassificationTagGroup.json \\
+Classification:com.adlinktech.vision:v1.0 & ConfigActualTagGroup.json \\
+Classification:com.adlinktech.vision:v1.0 & ConfigRequestTagGroup.json \\
+Classification:com.adlinktech.vision:v1.0 & DetectionBoxTagGroup.json \\
+Classification:com.adlinktech.vision:v1.0 & DetectionPointTagGroup.json \\
+Classification:com.adlinktech.vision:v1.0 & DeviceErrorTagGroup.json \\
+Classification:com.adlinktech.vision:v1.0 & DeviceInfoTagGroup.json \\
+Classification:com.adlinktech.vision:v1.0 & EngineConfigTagGroup.json \\
+Classification:com.adlinktech.vision:v1.0 & EngineInfoTagGroup.json \\
+Classification:com.adlinktech.vision:v1.0 & ModelReceiverStatusTagGroup.json \\
+Classification:com.adlinktech.vision:v1.0 & OutputTensorTagGroup.json \\
+Classification:com.adlinktech.vision:v1.0 & PerformanceTagGroup.json \\
+Classification:com.adlinktech.vision:v1.0 & SegmentationTagGroup.json \\
+Classification:com.adlinktech.vision:v1.0 & StreamRequestTagGroup.json \\
+Classification:com.adlinktech.vision:v1.0 & TrainingStreamerConfigTagGroup.json \\
+Classification:com.adlinktech.vision:v1.0 & VideoFrameTagGroup.json \\
+ConfigActual:com.adlinktech.vision:v1.0 & ConfigActualTagGroup.json \\
+ConfigActual:com.adlinktech.vision:v1.0 & ConfigRequestTagGroup.json \\
+ConfigActual:com.adlinktech.vision:v1.0 & DetectionBoxTagGroup.json \\
+ConfigActual:com.adlinktech.vision:v1.0 & DetectionPointTagGroup.json \\
+ConfigActual:com.adlinktech.vision:v1.0 & DeviceErrorTagGroup.json \\
+ConfigActual:com.adlinktech.vision:v1.0 & DeviceInfoTagGroup.json \\
+ConfigActual:com.adlinktech.vision:v1.0 & EngineConfigTagGroup.json \\
+ConfigActual:com.adlinktech.vision:v1.0 & EngineInfoTagGroup.json \\
+ConfigActual:com.adlinktech.vision:v1.0 & ModelReceiverStatusTagGroup.json \\
+ConfigActual:com.adlinktech.vision:v1.0 & OutputTensorTagGroup.json \\
+ConfigActual:com.adlinktech.vision:v1.0 & PerformanceTagGroup.json \\
+ConfigActual:com.adlinktech.vision:v1.0 & SegmentationTagGroup.json \\
+ConfigActual:com.adlinktech.vision:v1.0 & StreamRequestTagGroup.json \\
+ConfigActual:com.adlinktech.vision:v1.0 & TrainingStreamerConfigTagGroup.json \\
+ConfigActual:com.adlinktech.vision:v1.0 & VideoFrameTagGroup.json \\
+ConfigRequest:com.adlinktech.vision:v1.0 & ConfigRequestTagGroup.json \\
+ConfigRequest:com.adlinktech.vision:v1.0 & DetectionBoxTagGroup.json \\
+ConfigRequest:com.adlinktech.vision:v1.0 & DetectionPointTagGroup.json \\
+ConfigRequest:com.adlinktech.vision:v1.0 & DeviceErrorTagGroup.json \\
+ConfigRequest:com.adlinktech.vision:v1.0 & DeviceInfoTagGroup.json \\
+ConfigRequest:com.adlinktech.vision:v1.0 & EngineConfigTagGroup.json \\
+ConfigRequest:com.adlinktech.vision:v1.0 & EngineInfoTagGroup.json \\
+ConfigRequest:com.adlinktech.vision:v1.0 & ModelReceiverStatusTagGroup.json \\
+ConfigRequest:com.adlinktech.vision:v1.0 & OutputTensorTagGroup.json \\
+ConfigRequest:com.adlinktech.vision:v1.0 & PerformanceTagGroup.json \\
+ConfigRequest:com.adlinktech.vision:v1.0 & SegmentationTagGroup.json \\
+ConfigRequest:com.adlinktech.vision:v1.0 & StreamRequestTagGroup.json \\
+ConfigRequest:com.adlinktech.vision:v1.0 & TrainingStreamerConfigTagGroup.json \\
+ConfigRequest:com.adlinktech.vision:v1.0 & VideoFrameTagGroup.json \\
+CreateStream:com.adlinktech.vision:0.1.0 & CreateStreamTagGroup.json \\
+CreateStream:com.adlinktech.vision:0.1.0 & DeleteStreamTagGroup.json \\
+CreateStream:com.adlinktech.vision:0.1.0 & StreamViewerConfigTagGroup.json \\
+DeleteStream:com.adlinktech.vision:0.1.0 & DeleteStreamTagGroup.json \\
+DeleteStream:com.adlinktech.vision:0.1.0 & StreamViewerConfigTagGroup.json \\
+DetectionBox:com.adlinktech.vision:v1.0 & DetectionBoxTagGroup.json \\
+DetectionBox:com.adlinktech.vision:v1.0 & DetectionPointTagGroup.json \\
+DetectionBox:com.adlinktech.vision:v1.0 & DeviceErrorTagGroup.json \\
+DetectionBox:com.adlinktech.vision:v1.0 & DeviceInfoTagGroup.json \\
+DetectionBox:com.adlinktech.vision:v1.0 & EngineConfigTagGroup.json \\
+DetectionBox:com.adlinktech.vision:v1.0 & EngineInfoTagGroup.json \\
+DetectionBox:com.adlinktech.vision:v1.0 & ModelReceiverStatusTagGroup.json \\
+DetectionBox:com.adlinktech.vision:v1.0 & OutputTensorTagGroup.json \\
+DetectionBox:com.adlinktech.vision:v1.0 & PerformanceTagGroup.json \\
+DetectionBox:com.adlinktech.vision:v1.0 & SegmentationTagGroup.json \\
+DetectionBox:com.adlinktech.vision:v1.0 & StreamRequestTagGroup.json \\
+DetectionBox:com.adlinktech.vision:v1.0 & TrainingStreamerConfigTagGroup.json \\
+DetectionBox:com.adlinktech.vision:v1.0 & VideoFrameTagGroup.json \\
+DetectionPoint:com.adlinktech.vision:v1.0 & DetectionPointTagGroup.json \\
+DetectionPoint:com.adlinktech.vision:v1.0 & DeviceErrorTagGroup.json \\
+DetectionPoint:com.adlinktech.vision:v1.0 & DeviceInfoTagGroup.json \\
+DetectionPoint:com.adlinktech.vision:v1.0 & EngineConfigTagGroup.json \\
+DetectionPoint:com.adlinktech.vision:v1.0 & EngineInfoTagGroup.json \\
+DetectionPoint:com.adlinktech.vision:v1.0 & ModelReceiverStatusTagGroup.json \\
+DetectionPoint:com.adlinktech.vision:v1.0 & OutputTensorTagGroup.json \\
+DetectionPoint:com.adlinktech.vision:v1.0 & PerformanceTagGroup.json \\
+DetectionPoint:com.adlinktech.vision:v1.0 & SegmentationTagGroup.json \\
+DetectionPoint:com.adlinktech.vision:v1.0 & StreamRequestTagGroup.json \\
+DetectionPoint:com.adlinktech.vision:v1.0 & TrainingStreamerConfigTagGroup.json \\
+DetectionPoint:com.adlinktech.vision:v1.0 & VideoFrameTagGroup.json \\
+DeviceError:com.adlinktech.vision:v1.0 & DeviceErrorTagGroup.json \\
+DeviceError:com.adlinktech.vision:v1.0 & DeviceInfoTagGroup.json \\
+DeviceError:com.adlinktech.vision:v1.0 & EngineConfigTagGroup.json \\
+DeviceError:com.adlinktech.vision:v1.0 & EngineInfoTagGroup.json \\
+DeviceError:com.adlinktech.vision:v1.0 & ModelReceiverStatusTagGroup.json \\
+DeviceError:com.adlinktech.vision:v1.0 & OutputTensorTagGroup.json \\
+DeviceError:com.adlinktech.vision:v1.0 & PerformanceTagGroup.json \\
+DeviceError:com.adlinktech.vision:v1.0 & SegmentationTagGroup.json \\
+DeviceError:com.adlinktech.vision:v1.0 & StreamRequestTagGroup.json \\
+DeviceError:com.adlinktech.vision:v1.0 & TrainingStreamerConfigTagGroup.json \\
+DeviceError:com.adlinktech.vision:v1.0 & VideoFrameTagGroup.json \\
+DeviceInfo:com.adlinktech.vision:v1.0 & DeviceInfoTagGroup.json \\
+DeviceInfo:com.adlinktech.vision:v1.0 & EngineConfigTagGroup.json \\
+DeviceInfo:com.adlinktech.vision:v1.0 & EngineInfoTagGroup.json \\
+DeviceInfo:com.adlinktech.vision:v1.0 & ModelReceiverStatusTagGroup.json \\
+DeviceInfo:com.adlinktech.vision:v1.0 & OutputTensorTagGroup.json \\
+DeviceInfo:com.adlinktech.vision:v1.0 & PerformanceTagGroup.json \\
+DeviceInfo:com.adlinktech.vision:v1.0 & SegmentationTagGroup.json \\
+DeviceInfo:com.adlinktech.vision:v1.0 & StreamRequestTagGroup.json \\
+DeviceInfo:com.adlinktech.vision:v1.0 & TrainingStreamerConfigTagGroup.json \\
+DeviceInfo:com.adlinktech.vision:v1.0 & VideoFrameTagGroup.json \\
+EngineConfig:com.adlinktech.vision:v1.0 & EngineConfigTagGroup.json \\
+EngineConfig:com.adlinktech.vision:v1.0 & EngineInfoTagGroup.json \\
+EngineConfig:com.adlinktech.vision:v1.0 & ModelReceiverStatusTagGroup.json \\
+EngineConfig:com.adlinktech.vision:v1.0 & OutputTensorTagGroup.json \\
+EngineConfig:com.adlinktech.vision:v1.0 & PerformanceTagGroup.json \\
+EngineConfig:com.adlinktech.vision:v1.0 & SegmentationTagGroup.json \\
+EngineConfig:com.adlinktech.vision:v1.0 & StreamRequestTagGroup.json \\
+EngineConfig:com.adlinktech.vision:v1.0 & TrainingStreamerConfigTagGroup.json \\
+EngineConfig:com.adlinktech.vision:v1.0 & VideoFrameTagGroup.json \\
+EngineInfo:com.adlinktech.vision:v1.0 & EngineInfoTagGroup.json \\
+EngineInfo:com.adlinktech.vision:v1.0 & ModelReceiverStatusTagGroup.json \\
+EngineInfo:com.adlinktech.vision:v1.0 & OutputTensorTagGroup.json \\
+EngineInfo:com.adlinktech.vision:v1.0 & PerformanceTagGroup.json \\
+EngineInfo:com.adlinktech.vision:v1.0 & SegmentationTagGroup.json \\
+EngineInfo:com.adlinktech.vision:v1.0 & StreamRequestTagGroup.json \\
+EngineInfo:com.adlinktech.vision:v1.0 & TrainingStreamerConfigTagGroup.json \\
+EngineInfo:com.adlinktech.vision:v1.0 & VideoFrameTagGroup.json \\
+ModelReceiverStatus:com.adlinktech.vision:v1.0 & ModelReceiverStatusTagGroup.json \\
+ModelReceiverStatus:com.adlinktech.vision:v1.0 & OutputTensorTagGroup.json \\
+ModelReceiverStatus:com.adlinktech.vision:v1.0 & PerformanceTagGroup.json \\
+ModelReceiverStatus:com.adlinktech.vision:v1.0 & SegmentationTagGroup.json \\
+ModelReceiverStatus:com.adlinktech.vision:v1.0 & StreamRequestTagGroup.json \\
+ModelReceiverStatus:com.adlinktech.vision:v1.0 & TrainingStreamerConfigTagGroup.json \\
+ModelReceiverStatus:com.adlinktech.vision:v1.0 & VideoFrameTagGroup.json \\
+OutputTensor:com.adlinktech.vision:v1.0 & OutputTensorTagGroup.json \\
+OutputTensor:com.adlinktech.vision:v1.0 & PerformanceTagGroup.json \\
+OutputTensor:com.adlinktech.vision:v1.0 & SegmentationTagGroup.json \\
+OutputTensor:com.adlinktech.vision:v1.0 & StreamRequestTagGroup.json \\
+OutputTensor:com.adlinktech.vision:v1.0 & TrainingStreamerConfigTagGroup.json \\
+OutputTensor:com.adlinktech.vision:v1.0 & VideoFrameTagGroup.json \\
+Performance:com.adlinktech.vision:v1.0 & PerformanceTagGroup.json \\
+Performance:com.adlinktech.vision:v1.0 & SegmentationTagGroup.json \\
+Performance:com.adlinktech.vision:v1.0 & StreamRequestTagGroup.json \\
+Performance:com.adlinktech.vision:v1.0 & TrainingStreamerConfigTagGroup.json \\
+Performance:com.adlinktech.vision:v1.0 & VideoFrameTagGroup.json \\
+Segmentation:com.adlinktech.vision:v1.0 & SegmentationTagGroup.json \\
+Segmentation:com.adlinktech.vision:v1.0 & StreamRequestTagGroup.json \\
+Segmentation:com.adlinktech.vision:v1.0 & TrainingStreamerConfigTagGroup.json \\
+Segmentation:com.adlinktech.vision:v1.0 & VideoFrameTagGroup.json \\
+StreamRequest:com.adlinktech.vision:v1.0 & StreamRequestTagGroup.json \\
+StreamRequest:com.adlinktech.vision:v1.0 & TrainingStreamerConfigTagGroup.json \\
+StreamRequest:com.adlinktech.vision:v1.0 & VideoFrameTagGroup.json \\
+StreamViewerConfig:com.adlinktech.vision:0.1.0 & StreamViewerConfigTagGroup.json \\
+TrainingStreamerConfig:com.adlinktech.vision:v1.0 & TrainingStreamerConfigTagGroup.json \\
+TrainingStreamerConfig:com.adlinktech.vision:v1.0 & VideoFrameTagGroup.json \\
+VideoFrame:com.adlinktech.vision:v1.0 & VideoFrameTagGroup.json \\
+configuration:com.adlinktech.usb2405:v1.0 & DAQStateTagGroup.json \\
+meta_data:com.adlinktech.usb2405:v1.0 & ChannelMetaDataTagGroup.json \\
+meta_data:com.adlinktech.usb2405:v1.0 & DAQStateTagGroup.json \\
+raw_data:com.adlinktech.usb2405:v1.0 & ChannelDataTagGroup.json \\
+raw_data:com.adlinktech.usb2405:v1.0 & ChannelMetaDataTagGroup.json \\
+raw_data:com.adlinktech.usb2405:v1.0 & DAQStateTagGroup.json \\
+  \end{longtable}

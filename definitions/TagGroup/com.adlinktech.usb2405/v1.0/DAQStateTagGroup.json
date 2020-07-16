@@ -1,4 +1,4 @@
-{
+[{
    "name": "configuration",
    "context": "com.adlinktech.usb2405",
    "qosProfile": "state",
@@ -68,3 +68,4 @@
       {"name": "Level", "description": "channel input type", "kind": "INT16", "unit": "N/A"}
    ]
 }
+]

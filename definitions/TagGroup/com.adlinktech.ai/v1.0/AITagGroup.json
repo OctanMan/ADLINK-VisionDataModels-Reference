@@ -2,6 +2,7 @@
   "name": "AITagGroup",
   "context": "com.adlinktech.ai",
   "qosProfile": "telemetry",
+  "description" : "no description available",
   "version": "v1.0",
   "tags": [{
       "name": "MachineID",
