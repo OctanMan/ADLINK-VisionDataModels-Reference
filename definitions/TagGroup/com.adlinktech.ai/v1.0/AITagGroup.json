@@ -56,12 +56,12 @@
       "unit": "None"
     }, {
       "name": "StringResult",
-      "description": "AI ouput array of string",
+      "description": "AI output array of string",
       "kind": "TYPE_STRING_SEQ",
       "unit": "None"
     }, {
       "name": "BoxResult",
-      "description": "AI ouput array of (x,y) for two corner of box. ex: {0,0,120,240} is box with two corner (0,0) and  (120,240)",
+      "description": "AI output array of (x,y) for two corner of box. ex: {0,0,120,240} is box with two corner (0,0) and  (120,240)",
       "kind": "TYPE_INT32_SEQ",
       "unit": "None"
     }]

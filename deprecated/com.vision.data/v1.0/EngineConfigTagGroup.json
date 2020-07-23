@@ -1,0 +1,51 @@
+{
+    "name":"EngineConfig",
+    "context":"com.vision.data",
+    "qosProfile":"state",
+    "version":"v1.0",
+    "description":"Inference Engine Publishes its current & desired configuration",
+    "tags":[
+        {
+            "name":"id",
+            "description":"Inference Engine's unique identifier",
+            "kind":"STRING",
+            "unit":"UUID"
+        },
+        {
+            "name":"img_width",
+            "description":"Requested image width",
+            "kind":"UINT32",
+            "unit":"Pixels"
+        },
+        {
+            "name":"img_height",
+            "description":"Requested image height",
+            "kind":"UINT32",
+            "unit":"Pixels"
+        },
+        {
+            "name":"img_channels",
+            "description":"Requested Image channels",
+            "kind":"UINT16",
+            "unit":"channels"
+        },
+        {
+            "name":"img_crop",
+            "description":"Specifies if the loaded model expects cropped vs resized target image",
+            "kind":"BOOLEAN",
+            "unit":"Size"
+        },
+        {
+            "name":"model_type",
+            "description":"Loaded model network type",
+            "kind":"STRING",
+            "unit":"ModelType"
+        },
+        {
+            "name":"model_name",
+            "description":"Proper name of the loaded model",
+            "kind":"STRING",
+            "unit":"N/A"
+        }
+    ]
+}

@@ -61,7 +61,7 @@ mkdir -p $CONTEXT/$VERSION
 mv $i $CONTEXT/$VERSION
 done
 rmdir workingdir
-rm -fr com.vision.*
+#rm -fr com.vision.*
 for i in `find . -type f`
 do
 j=`echo $i | sed 's/.json.*$/.json/'`

@@ -1,0 +1,59 @@
+[
+    {
+        "name":"OuptutTensor",
+        "context":"com.vision.data",
+        "qosProfile":"event",
+        "version":"v1.0",
+        "description":"Generic inference engine results for any model",
+        "tags":[
+            {
+                "name":"engine_id",
+                "description":"Inference engine identifier",
+                "kind":"STRING",
+                "unit":"UUID"
+            },
+            {
+                "name":"stream_id",
+                "description":"ID of the stream fed into the inference engine",
+                "kind":"STRING",
+                "unit":"UUID"
+            },
+            {
+                "name":"frame_id",
+                "description":"ID of the input video frame fed to the inference engine",
+                "kind":"UINT32",
+                "unit":"NUM"
+            },
+            {
+                "name":"dimensions",
+                "description":"Total number of dimensions in output tensor",
+                "kind":"INT32",
+                "unit":"index"
+            },
+            {
+                "name":"data",
+                "description":"List of OutputTensor Data (the results)",
+                "kind":"NVP_SEQ",
+                "unit":"n/a",
+                "typedefinition": "OutputTensorData"
+            }
+        ]
+    },
+    {
+        "typedefinition": "OutputTensorData",
+        "tags": [
+            {
+                "name":"rank",
+                "description":"Size of output tensor dimension data",
+                "kind":"INT32",
+                "unit":"length"
+            },
+            {
+                "name":"data",
+                "description":"Data for specified dimension",
+                "kind":"FLOAT32_SEQ",
+                "unit":"raw"
+            }
+        ]
+    }
+]
