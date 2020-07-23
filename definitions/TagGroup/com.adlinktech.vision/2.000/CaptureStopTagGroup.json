@@ -1,0 +1,15 @@
+{
+    "name": "CaptureStop",
+    "context": "com.adlinktech.vision",
+    "qosProfile": "event",
+    "version": "2.000",
+    "description": "Perform a capture request for stop.",
+    "tags": [
+        {
+            "name": "StreamId",
+            "description": "The stream id would like to stop",
+            "kind": "STRING",
+            "unit": "NA"
+        }
+    ]
+}

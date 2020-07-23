@@ -1,0 +1,33 @@
+{
+    "name": "CaptureStart",
+    "context": "com.adlinktech.vision",
+    "qosProfile": "event",
+    "version": "2.000",
+    "description": "Perform a capture request for start.",
+    "tags": [
+        {
+            "name": "StreamId",
+            "description": "The stream id would like to start",
+            "kind": "STRING",
+            "unit": "NA"
+        },
+        {
+            "name": "Timeout",
+            "description": "Stream capture timeout time, 0 for no timeout.",
+            "kind": "INT32",
+            "unit": "NA"
+        },
+        {
+            "name": "NumberOfFrame",
+            "description": "How manay frames per time unit, 0 means no downsampling",
+            "kind": "INT32",
+            "unit": "NA"
+        },
+        {
+            "name": "TimeUnit",
+            "description": "Time unit, could be Second/Minute/Hour",
+            "kind": "STRING",
+            "unit": "NA"
+        }
+    ]
+}
