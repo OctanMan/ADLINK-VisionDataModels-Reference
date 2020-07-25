@@ -1,6 +1,6 @@
 {
     "name": "ModelConfigRequest",
-    "context": "com.vision.request",
+    "context": "com.adlinktech.vision.system",
     "qosProfile": "state",
     "version": "2.000",
     "description": "Request data for an inference engine to update its model configuration",
@@ -26,18 +26,21 @@
        {
           "name": "hardware",
           "description": "The hardware to run the model on: CPU, GPU, VPU or AUTO (optional -- defaults to AUTO)",
+	  "optional":"true",
           "kind": "STRING",
           "unit": "N/A"
        },
        {
           "name": "threshold",
           "description": "The threshold at which model outputs should be published (optional -- defaults to 0.50)",
+	  "optional":"true",
           "kind": "FLOAT32",
           "unit": "N/A"
        },
        {
           "name": "reload",
           "description": "A boolean indicating whether or not the model should be dynamically loaded (optional -- defaults to false)",
+	  "optional":"true",
           "kind": "BOOLEAN",
           "unit": "N/A"
        }

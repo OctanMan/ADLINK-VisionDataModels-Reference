@@ -1,6 +1,6 @@
 [
     {
-        "name":"EngineConfig",
+        "name":"EngineConfiguration",
         "context":"com.adlinktech.vision",
         "qosProfile":"state",
         "version":"2.000",
@@ -21,8 +21,9 @@
 	    {
                 "name":"streams",
                 "description":"Streams used by the inference engine",
-                "kind":"NVP_SEQ",
+                "kind":"MULTI_DIM_NVP",
 		"typedefinition":"EngineStreamConfig",
+		"dimensions":"1",
                 "unit":"n/a"
 	    },
             {
@@ -41,19 +42,21 @@
                 "name":"kind",
                 "description":"Inference engine kind",
                 "kind":"STRING",
-                "unit":"com.vision.models.inference.EngineKind"
+                "unit":"EngineKind"
             },
             {
                 "name":"image",
                 "description":"Configured input image expectations",
-                "kind":"NVP_SEQ",
+                "kind":"MULTI_DIM_NVP",
+		"dimensions":"1",
                 "unit":"n/a",
                 "typedefinition": "ImageConfig"
             },
             {
                 "name":"model",
                 "description":"Configured (loaded) model metadata",
-                "kind":"NVP_SEQ",
+                "kind":"MULTI_DIM_NVP",
+		"dimensions":"1",
                 "unit":"n/a",
                 "typedefinition": "ModelConfig"
             }
@@ -82,7 +85,7 @@
             },
             {
                 "name":"format",
-                "description":"Expected input image pixel format. See com::vision::models::PixelFormat",
+                "description":"Expected input image pixel format. ",
                 "kind":"STRING",
                 "unit":"PixelFormat"
             },
@@ -123,7 +126,7 @@
         "tags": [
             {
                 "name":"model_type",
-                "description":"Loaded model type see com::vision::models::ModelConfig",
+                "description":"The type of the model",
                 "kind":"STRING",
                 "unit":"ModelType"
             },
@@ -135,7 +138,7 @@
             },
             {
                 "name":"mode",
-                "description":"Loaded model precision. See com::vision::models::PrecisionMode",
+                "description":"Loaded model precision. ",
                 "kind":"STRING",
                 "unit":"PrecisionMode"
             },
@@ -146,8 +149,8 @@
                 "unit":"Percentage"
             },
             {
-                "name":"nms_threshold",
-                "description":"Configured Non-Maximum Supression Threshold",
+                "name":"non_maximum_suppression_threshold",
+                "description":"Configured Non-Maximum Suppression Threshold",
                 "kind":"FLOAT32",
                 "unit":"Percentage"
             },
@@ -159,7 +162,7 @@
             },
             {
                 "name":"output_type",
-                "description":"Configured inference output types see com::vision::models::ModelOutputType",
+                "description":"Configured inference output types",
                 "kind":"STRING",
                 "unit":"ModelOutputType"
             }

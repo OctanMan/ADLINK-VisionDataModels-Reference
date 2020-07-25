@@ -1,6 +1,6 @@
 {
     "name":"EngineInfo",
-    "context":"com.adlinktech.vision",
+    "context":"com.adlinktech.vision.system",
     "qosProfile":"state",
     "version":"2.000",
     "description":"Inference Engine State & Info",

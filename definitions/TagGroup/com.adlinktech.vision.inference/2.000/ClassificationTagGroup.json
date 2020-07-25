@@ -1,7 +1,7 @@
 [
     {
         "name":"Classification",
-        "context":"com.adlinktech.vision",
+        "context":"com.adlinktech.vision.inference",
         "qosProfile":"telemetry",
         "version":"2.000",
         "description":"Inference engine results for classification model",
@@ -13,23 +13,28 @@
                 "unit":"UUID"
             },
             {
-                "name":"stream_id",
-                "description":"ID of the stream fed into the inference engine",
-                "kind":"STRING",
-                "unit":"UUID"
-            },
-            {
                 "name":"frame_id",
                 "description":"ID of the input video frame fed to the inference engine",
                 "kind":"UINT32",
                 "unit":"NUM"
             },
             {
-                "name":"data",
+                "name":"classification_data",
                 "description":"List of Classification Data (the results)",
-                "kind":"NVP_SEQ",
+                "kind":"MULTI_DIM_NVP",
+		"dimensions":"1",
+		"optional":"true",
                 "unit":"n/a",
                 "typedefinition": "ClassificationData"
+            },
+            {
+                "name":"classification_data_high_precision",
+                "description":"List of Classification Data (the results, high precision)",
+                "kind":"MULTI_DIM_NVP",
+		"dimensions":"1",
+		"optional":"true",
+                "unit":"n/a",
+                "typedefinition": "ClassificationDataHighPrecision"
             }
         ]
     },
@@ -43,7 +48,7 @@
                 "unit":"n/a"
             },
             {
-                "name":"output",
+                "name":"output_type",
                 "description":"Output type - used when classification model has multiple types of labels for each output index",
                 "kind":"STRING",
                 "unit":"n/a"
@@ -58,6 +63,35 @@
                 "name":"probability",
                 "description":"Network confidence",
                 "kind":"FLOAT32",
+                "unit":"Percentage"
+            }
+        ]
+    },
+    {
+        "typedefinition": "ClassificationDataHighPrecision",
+        "tags": [
+            {
+                "name":"index",
+                "description":"Classification index",
+                "kind":"INT64",
+                "unit":"n/a"
+            },
+            {
+                "name":"output_type",
+                "description":"Output type - used when classification model has multiple types of labels for each output index",
+                "kind":"STRING",
+                "unit":"n/a"
+            },
+            {
+                "name":"label",
+                "description":"Classification label name",
+                "kind":"STRING",
+                "unit":"n/a"
+            },
+            {
+                "name":"probability",
+                "description":"Network confidence",
+                "kind":"FLOAT64",
                 "unit":"Percentage"
             }
         ]

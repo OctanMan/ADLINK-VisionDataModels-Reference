@@ -1,7 +1,7 @@
 [
     {
         "name":"OutputTensor",
-        "context":"com.adlinktech.vision",
+        "context":"com.adlinktech.vision.inference",
         "qosProfile":"telemetry",
         "version":"2.000",
         "description":"Generic inference engine results for any model",
@@ -31,11 +31,22 @@
                 "unit":"index"
             },
             {
-                "name":"data",
+                "name":"tensor_data",
                 "description":"List of OutputTensor Data (the results)",
-                "kind":"NVP_SEQ",
+                "kind":"MULTI_DIM_NVP",
+		"dimensions":"1",
+		"optional":"1",
                 "unit":"n/a",
                 "typedefinition": "TensorData"
+            },
+            {
+                "name":"tensor_data_high_precision",
+                "description":"List of OutputTensor Data (the results, high precision)",
+                "kind":"MULTI_DIM_NVP",
+		"dimensions":"1",
+		"optional":"1",
+                "unit":"n/a",
+                "typedefinition": "TensorDataHighPrecision"
             }
         ]
     },
@@ -61,16 +72,51 @@
                 "unit":"length"
             },
             {
-                "name":"data",
+                "name":"dimension_data",
                 "description":"Data for specified dimension",
                 "kind":"FLOAT32_SEQ",
                 "unit":"raw"
             },
             {
-                "name":"data_type",
+                "name":"dimension_data_precision",
                 "description":"Precision of data sequence",
                 "kind":"STRING",
-                "unit":"com.vision.models.PrecisionMode"
+                "unit":"PrecisionMode"
+            }
+        ]
+    },
+    {
+        "typedefinition": "TensorDataHighPrecision",
+        "tags": [
+            {
+                "name":"index",
+                "description":"Output tensor index",
+                "kind":"UINT64",
+                "unit":"length"
+            },
+            {
+                "name":"output_tensor",
+                "description":"Named output tensor",
+                "kind":"UINT64",
+                "unit":"length"
+            },
+            {
+                "name":"rank",
+                "description":"Size of output tensor dimension data",
+                "kind":"UINT32_SEQ",
+                "unit":"length"
+            },
+            {
+                "name":"dimension_data",
+                "description":"Data for specified dimension",
+                "kind":"FLOAT64_SEQ",
+                "unit":"raw"
+            },
+            {
+                "name":"dimension_data_precision",
+                "description":"Precision of data sequence",
+                "kind":"STRING",
+                "unit":"PrecisionMode"
             }
         ]
     }

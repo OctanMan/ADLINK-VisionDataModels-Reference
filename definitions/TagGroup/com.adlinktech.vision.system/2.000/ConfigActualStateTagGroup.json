@@ -1,20 +1,14 @@
 [
     {
-        "name":"ConfigActual",
+        "name":"ConfigurationActualState",
         "context":"com.adlinktech.vision",
         "qosProfile":"state",
         "version":"2.000",
-        "description":"Current values of configuration topic",
+        "description":"Current Configuration of a Device",
         "tags":[
             {
-                "name":"source",
-                "description":"Application ID effecting the config request",
-                "kind":"STRING",
-                "unit":"UUID"
-            },
-            {
-                "name":"data",
-                "description":"List of Detection Box Data (the results)",
+                "name":"configuration_data",
+                "description":"Detection Box Data (the results)",
                 "kind":"NVP_SEQ",
                 "unit":"n/a",
                 "typedefinition": "ConfigData"

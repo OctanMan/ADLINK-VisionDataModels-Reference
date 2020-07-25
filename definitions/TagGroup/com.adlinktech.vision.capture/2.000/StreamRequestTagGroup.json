@@ -1,20 +1,14 @@
 {
     "name":"StreamRequest",
-    "context":"com.adlinktech.vision",
+    "context":"com.adlinktech.vision.capture",
     "qosProfile":"event",
     "version":"2.000",
-    "description":"Request model for initating device video streams",
+    "description":"Request model for initating device video streams; the stream is encapsulated in the flowId",
     "tags":[
         {
-            "name":"stream_id",
-            "description":"ID of the stream to control",
+            "name":"request",
+            "description":"What to do with the stream: ENABLE, DISABLE",
             "kind":"STRING",
-            "unit":"UUID"
-        },
-        {
-            "name":"enable_stream",
-            "description":"Enable or disable the stream",
-            "kind":"BOOLEAN",
             "unit":"n/a"
         },
         {

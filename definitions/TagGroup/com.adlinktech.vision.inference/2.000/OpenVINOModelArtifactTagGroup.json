@@ -1,6 +1,6 @@
 {
     "name": "OpenVINOModelArtifact",
-    "context": "com.vision.data",
+    "context": "com.adlinktech.vision.inference",
     "qosProfile": "telemetry",
     "version": "2.000",
     "description": "Inference engine model artifact and associated metadata",
@@ -12,16 +12,23 @@
           "unit":"N/A"
        },
        {
+          "name":"data_encoding",
+          "description":"The type of data encoded in the above. When omitted, TAR format is assumed.",
+	  "optional":"true",
+          "kind":"STRING",
+          "unit":"N/A"
+       },
+       {
           "name": "precision_mode",
           "description": "The precision mode of the model",
           "kind": "STRING",
-          "unit": "com.vision.models.PrecisionMode"
+          "unit": "PrecisionMode"
        },
        {
           "name": "output_type",
           "description": "The output type of the model",
           "kind": "STRING",
-          "unit": "com.vision.models.ModelOutputType"
+          "unit": "ModelOutputType"
        },
        {
           "name": "labels_file",

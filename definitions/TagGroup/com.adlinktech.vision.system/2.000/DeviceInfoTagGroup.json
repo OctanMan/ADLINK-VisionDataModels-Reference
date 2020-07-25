@@ -1,6 +1,6 @@
 {
     "name":"DeviceInfo",
-    "context":"com.adlinktech.vision",
+    "context":"com.adlinktech.vision.system",
     "qosProfile":"state",
     "version":"2.000",
     "description":"Vision Device properties",
@@ -54,13 +54,13 @@
             "unit":"n/a"
         },
         {
-            "name":"fw_version",
+            "name":"firmware_version",
             "description":"Vision Device firmware version",
             "kind":"STRING",
             "unit":"n/a"
         },
         {
-            "name":"dev_id",
+            "name":"system_device_id",
             "description":"Vision Device host interface (ex. /dev/video0 or /dev/ttyUSB0)",
             "kind":"STRING",
             "unit":"n/a"

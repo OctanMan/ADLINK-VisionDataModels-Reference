@@ -1,6 +1,6 @@
 {
     "name":"BinaryArtifact",
-    "context":"com.adlinktech.vision",
+    "context":"com.adlinktech.vision.inference",
     "qosProfile":"event",
     "version":"2.000",
     "description":"Message containing serialized file artifact",
@@ -13,8 +13,9 @@
         },
         {
             "name":"target",
-            "description":"(Optional) URI/ID of the intended recepient/use case",
+            "description":"(Optional) URI/ID of the intended recipient/use case, in case of a destination not on the DataRiver",
             "kind":"STRING",
+	    "optional":"true",
             "unit":"N/A"
         },
         {
@@ -43,9 +44,9 @@
             "unit":"time"
         },
         {
-            "name":"data",
-            "description":"List of Detection Box Data (the results)",
-            "kind":"TYPE_BYTE_SEQ",
+            "name":"artifact_data",
+            "description":"The Artifact",
+            "kind":"BYTE_SEQ",
             "unit":"n/a"
         }
     ]

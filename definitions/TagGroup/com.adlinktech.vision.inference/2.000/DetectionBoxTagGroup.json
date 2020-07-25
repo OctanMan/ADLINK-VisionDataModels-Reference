@@ -1,0 +1,173 @@
+[
+    {
+        "name":"DetectionBox",
+        "context":"com.adlinktech.vision.inference",
+        "qosProfile":"telemetry",
+        "version":"2.000",
+        "description":"Inference engine results for object detection model outputing bounding boxes. The stream_id is not part of this TagGroup and assumed to be part of the run-time flowId",
+        "tags":[
+            {
+                "name":"engine_id",
+                "description":"Inference engine identifier",
+                "kind":"STRING",
+                "unit":"UUID"
+            },
+            {
+                "name":"frame_id",
+                "description":"ID of the input video frame fed to the inference engine",
+                "kind":"UINT32",
+                "unit":"NUM"
+            },
+            {
+                "name":"detection_box_data",
+                "description":"List of Detection Box Data (the results)",
+                "kind":"MULTI_DIM_NVP",
+		"dimensions":"1",
+		"optional":"true",
+                "unit":"n/a",
+                "typedefinition": "DetectionBoxData"
+            },
+            {
+                "name":"detection_box_data_high_precision",
+                "description":"List of Detection Box Data (the results, high precision)",
+                "kind":"MULTI_DIM_NVP",
+		"dimensions":"1",
+		"optional":"true",
+                "unit":"n/a",
+                "typedefinition": "DetectionBoxDataHighPrecision"
+	    }
+        ]
+    },
+    {
+        "typedefinition": "DetectionBoxData",
+        "tags": [
+            {
+                "name":"obj_id",
+                "description":"Detected object id",
+                "kind":"INT32",
+                "unit":"UNIQUE 32-BITS ID"
+            },
+            {
+                "name":"obj_label",
+                "description":"Detected object proper name",
+                "kind":"STRING",
+                "unit":"UUID"
+            },
+            {
+                "name":"class_id",
+                "description":"Detected object's classification type as raw id",
+                "kind":"INT32",
+                "unit":"UNIQUE 32-BITS ID"
+            },
+            {
+                "name":"class_label",
+                "description":"Detected object's classification as proper name",
+                "kind":"STRING",
+                "unit":"UUID"
+            },
+            {
+                "name":"x1",
+                "description":"Top Left X Coordinate (% from 0,0)",
+                "kind":"FLOAT32",
+                "unit":"Percentage"
+            },
+            {
+                "name":"y1",
+                "description":"Top Left Y Coordinate (% from 0,0)",
+                "kind":"FLOAT32",
+                "unit":"Percentage"
+            },
+            {
+                "name":"x2",
+                "description":"Bottom Right X Coordinate (% from 0,0)",
+                "kind":"FLOAT32",
+                "unit":"Percentage"
+            },
+            {
+                "name":"y2",
+                "description":"Bottom Right Y Coordinate (% from 0,0)",
+                "kind":"FLOAT32",
+                "unit":"Percentage"
+            },
+            {
+                "name":"probability",
+                "description":"Network confidence",
+                "kind":"FLOAT32",
+                "unit":"Percentage"
+            },
+            {
+                "name":"meta",
+                "description":"Buffer for extra inference metadata",
+                "kind":"STRING",
+		"optional":"true",
+                "unit":"N/A"
+            }
+        ]
+    },
+    {
+        "typedefinition": "DetectionBoxDataHighPrecision",
+        "tags": [
+            {
+                "name":"obj_id",
+                "description":"Detected object id (length as appropriate to the system)",
+                "kind":"STRING",
+                "unit":"UUID"
+            },
+            {
+                "name":"obj_label",
+                "description":"Detected object proper name",
+                "kind":"STRING",
+                "unit":"UUID"
+            },
+            {
+                "name":"class_id",
+                "description":"Detected object's classification type as raw id",
+                "kind":"STRING",
+                "unit":"UUID"
+            },
+            {
+                "name":"class_label",
+                "description":"Detected object's classification as proper name",
+                "kind":"STRING",
+                "unit":"UUID"
+            },
+            {
+                "name":"x1",
+                "description":"Top Left X Coordinate (% from 0,0)",
+                "kind":"FLOAT64",
+                "unit":"Percentage"
+            },
+            {
+                "name":"y1",
+                "description":"Top Left Y Coordinate (% from 0,0)",
+                "kind":"FLOAT64",
+                "unit":"Percentage"
+            },
+            {
+                "name":"x2",
+                "description":"Bottom Right X Coordinate (% from 0,0)",
+                "kind":"FLOAT64",
+                "unit":"Percentage"
+            },
+            {
+                "name":"y2",
+                "description":"Bottom Right Y Coordinate (% from 0,0)",
+                "kind":"FLOAT64",
+                "unit":"Percentage"
+            },
+            {
+                "name":"probability",
+                "description":"Network confidence",
+                "kind":"FLOAT64",
+                "unit":"Percentage"
+            },
+            {
+                "name":"meta",
+                "description":"Buffer for extra inference metadata",
+                "kind":"STRING",
+		"optional":"true",
+                "unit":"N/A"
+            }
+        ]
+    }
+]
