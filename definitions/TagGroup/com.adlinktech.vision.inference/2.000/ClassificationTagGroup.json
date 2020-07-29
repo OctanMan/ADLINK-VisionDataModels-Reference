@@ -18,6 +18,12 @@
                 "kind":"UINT32",
                 "unit":"NUM"
             },
+	    {
+		    "name":"model_id",
+		    "description": "UUID referencing ClassificationData to a project",
+		    "kind":"STRING",
+		    "unit":"UUID"
+	    },
             {
                 "name":"classification_data",
                 "description":"List of Classification Data (the results)",
@@ -38,25 +44,38 @@
             }
         ]
     },
-    {
+ {
         "typedefinition": "ClassificationData",
         "tags": [
             {
-                "name":"index",
-                "description":"Classification index",
+                "name":"category_id",
+                "description":"Classification category/class ID",
                 "kind":"INT32",
                 "unit":"n/a"
             },
             {
-                "name":"output_type",
-                "description":"Output type - used when classification model has multiple types of labels for each output index",
+                "name":"category_label",
+                "description":"Human interpreted category name",
                 "kind":"STRING",
                 "unit":"n/a"
             },
             {
-                "name":"label",
-                "description":"Classification label name",
+                "name":"super_category_id",
+                "description":"Super Category ID containing the category",
+                "kind":"INT32",
+                "unit":"n/a"
+            },
+            {
+                "name":"super_category_label",
+                "description":"Human interpreted super category name",
                 "kind":"STRING",
+                "unit":"n/a"
+            },
+            {
+                "name":"metadata",
+                "description":"Generic buffer for model-specific metadata",
+                "kind":"STRING",
+                "optional":"true",
                 "unit":"n/a"
             },
             {
@@ -65,27 +84,41 @@
                 "kind":"FLOAT32",
                 "unit":"Percentage"
             }
-        ]
-    },
-    {
+
+]
+},
+{
         "typedefinition": "ClassificationDataHighPrecision",
         "tags": [
             {
-                "name":"index",
-                "description":"Classification index",
+                "name":"category_id",
+                "description":"Classification category/class ID",
                 "kind":"INT64",
                 "unit":"n/a"
             },
             {
-                "name":"output_type",
-                "description":"Output type - used when classification model has multiple types of labels for each output index",
+                "name":"category_label",
+                "description":"Human interpreted category name",
                 "kind":"STRING",
                 "unit":"n/a"
             },
             {
-                "name":"label",
-                "description":"Classification label name",
+                "name":"super_category_id",
+                "description":"Super Category ID containing the category",
+                "kind":"INT64",
+                "unit":"n/a"
+            },
+            {
+                "name":"super_category_label",
+                "description":"Human interpreted super category name",
                 "kind":"STRING",
+                "unit":"n/a"
+            },
+            {
+                "name":"metadata",
+                "description":"Generic buffer for model-specific metadata",
+                "kind":"STRING",
+                "optional":"true",
                 "unit":"n/a"
             },
             {
@@ -94,6 +127,6 @@
                 "kind":"FLOAT64",
                 "unit":"Percentage"
             }
-        ]
-    }
+]
+}
 ]

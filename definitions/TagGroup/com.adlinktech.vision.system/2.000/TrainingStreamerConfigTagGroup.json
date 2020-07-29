@@ -1,7 +1,7 @@
 [
     {
         "name": "TrainingStreamerConfig",
-        "context": "com.adlinktech.vision",
+        "context": "com.adlinktech.vision.system",
         "qosProfile": "state",
         "version": "2.000",
         "description": "Reports if a training streamer status is change.",

@@ -1,7 +1,7 @@
 [
     {
         "name":"EngineConfiguration",
-        "context":"com.adlinktech.vision",
+        "context":"com.adlinktech.vision.system",
         "qosProfile":"state",
         "version":"2.000",
         "description":"Inference Engine Publishes its current & desired configuration",
@@ -24,6 +24,7 @@
                 "kind":"MULTI_DIM_NVP",
 		"typedefinition":"EngineStreamConfig",
 		"dimensions":"1",
+		"optional":"true",
                 "unit":"n/a"
 	    },
             {
@@ -105,17 +106,19 @@
                 "name":"roi_x1",
                 "description":"Declares Top-Left X position of Region of Interest if image should be croppped",
                 "kind":"UINT32",
+                "optional":"true",
                 "unit":"pixels"
             },
             {
                 "name":"roi_y1",
                 "description":"Declares Top-Left Y position of Region of Interest if image should be croppped",
                 "kind":"UINT32",
+                "optional":"true",
                 "unit":"pixels"
             },
             {
                 "name":"framerate",
-                "description":"Specifies the configured/expected framerate for input images treams",
+                "description":"Specifies the configured/expected framerate for input images streams",
                 "kind":"FLOAT32",
                 "unit":"fps"
             }
@@ -126,7 +129,7 @@
         "tags": [
             {
                 "name":"model_type",
-                "description":"The type of the model",
+                "description":"Loaded model type see com::vision::models::ModelConfig",
                 "kind":"STRING",
                 "unit":"ModelType"
             },
@@ -138,7 +141,7 @@
             },
             {
                 "name":"mode",
-                "description":"Loaded model precision. ",
+                "description":"Loaded model precision.  See com::vision::models::PrecisionMode",
                 "kind":"STRING",
                 "unit":"PrecisionMode"
             },
@@ -162,7 +165,7 @@
             },
             {
                 "name":"output_type",
-                "description":"Configured inference output types",
+                "description":"Configured inference output types, see com::vision::models::ModelOutputType",
                 "kind":"STRING",
                 "unit":"ModelOutputType"
             }

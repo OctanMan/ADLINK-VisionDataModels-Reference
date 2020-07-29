@@ -44,7 +44,7 @@
         {
             "name":"size",
             "description":"Data size",
-            "kind":"UINT32",
+            "kind":"UINT64",
             "unit":"Size"
         },
         {

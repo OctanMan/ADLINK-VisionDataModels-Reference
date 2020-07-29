@@ -19,10 +19,22 @@
                 "unit":"NUM"
             },
             {
-                "name":"inference_id",
+                "name":"model_id",
                 "description":"Segmentation mask instance in the result array",
                 "kind":"UINT32",
                 "unit":"NUM"
+            },
+            {
+                "name":"width",
+                "description":"Segmentation mask width",
+                "kind":"INT32",
+                "unit":"pixels"
+            },
+            {
+                "name":"height",
+                "description":"Segmentation mask height",
+                "kind":"INT32",
+                "unit":"pixels"
             },
             {
                 "name":"segmentation_data",
@@ -48,22 +60,16 @@
         "typedefinition": "SegmentationData",
         "tags": [
             {
-                "name":"id",
-                "description":"Segmentation mask index/id",
+                "name":"category_id",
+                "description":"Mask cateogry/class identifer",
                 "kind":"INT32",
-                "unit":"UUID"
+                "unit":"n/a"
             },
             {
-                "name":"width",
-                "description":"Segmentation mask frame width",
-                "kind":"INT32",
-                "unit":"pixels"
-            },
-            {
-                "name":"height",
-                "description":"Segmentation mask frame height",
-                "kind":"INT32",
-                "unit":"pixels"
+                "name":"category_label",
+                "description":"Human interpreted category name of the mask",
+                "kind":"STRING",
+                "unit":"n/a"
             },
             {
                 "name":"size",
@@ -81,13 +87,8 @@
                 "name":"color",
                 "description":"Segmentation mask color (#XXXXXX)",
                 "kind":"STRING",
+                "optional":"true",
                 "unit":"Color"
-            },
-            {
-                "name":"label",
-                "description":"Classification label name",
-                "kind":"STRING",
-                "unit":"UUID"
             },
             {
                 "name":"probability",
@@ -107,22 +108,16 @@
         "typedefinition": "SegmentationDataHighPrecision",
         "tags": [
             {
-                "name":"id",
-                "description":"Segmentation mask index/id",
+                "name":"category_id",
+                "description":"Mask cateogry/class identifer",
+                "kind":"INT64",
+                "unit":"n/a"
+            },
+            {
+                "name":"category_label",
+                "description":"Human interpreted category name of the mask",
                 "kind":"STRING",
-                "unit":"UUID"
-            },
-            {
-                "name":"width",
-                "description":"Segmentation mask frame width",
-                "kind":"INT64",
-                "unit":"pixels"
-            },
-            {
-                "name":"height",
-                "description":"Segmentation mask frame height",
-                "kind":"INT64",
-                "unit":"pixels"
+                "unit":"n/a"
             },
             {
                 "name":"size",
@@ -140,13 +135,8 @@
                 "name":"color",
                 "description":"Segmentation mask color (#XXXXXX)",
                 "kind":"STRING",
+                "optional":"true",
                 "unit":"Color"
-            },
-            {
-                "name":"label",
-                "description":"Classification label name",
-                "kind":"STRING",
-                "unit":"UUID"
             },
             {
                 "name":"probability",

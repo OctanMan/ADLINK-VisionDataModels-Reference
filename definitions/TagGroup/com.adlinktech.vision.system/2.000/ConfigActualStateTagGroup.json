@@ -1,7 +1,7 @@
 [
     {
         "name":"ConfigurationActualState",
-        "context":"com.adlinktech.vision",
+        "context":"com.adlinktech.vision".system,
         "qosProfile":"state",
         "version":"2.000",
         "description":"Current Configuration of a Device",

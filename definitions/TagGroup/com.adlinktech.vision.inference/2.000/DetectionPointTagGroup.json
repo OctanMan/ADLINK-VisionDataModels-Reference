@@ -19,6 +19,12 @@
                 "unit":"NUM"
             },
             {
+                "name":"model_id",
+                "description":" uuid referencing DetectionPointData to a project",
+                "kind":"STRING",
+                "unit":"UUID"
+            },
+            {
                 "name":"detection_point_data",
                 "description":"List of Detection Point Data (the results)",
                 "kind":"MULTI_DIM_NVP",
@@ -42,28 +48,16 @@
         "typedefinition": "DetectionPointData",
         "tags": [
             {
-                "name":"object_id",
-                "description":"Detected object id",
+                "name":"category_id",
+                "description":"Detected object point cateogry/class ID",
                 "kind":"INT32",
-                "unit":"UUID"
+                "unit":"n/a"
             },
             {
-                "name":"object_label",
-                "description":"Detected object proper name",
+                "name":"category_label",
+                "description":"Human interpreted category name of the detected point of interest",
                 "kind":"STRING",
-                "unit":"UUID"
-            },
-            {
-                "name":"class_id",
-                "description":"Detected object's classification type as raw id",
-                "kind":"INT32",
-                "unit":"UUID"
-            },
-            {
-                "name":"class_label",
-                "description":"Detected object's classification as proper name",
-                "kind":"STRING",
-                "unit":"UUID"
+                "unit":"n/a"
             },
             {
                 "name":"x",
@@ -90,10 +84,17 @@
                 "unit":"Percentage"
             },
             {
-                "name":"meta",
-                "description":"Buffer for extra inference metadata",
-		"optional":"true",
+                "name":"color",
+                "description":"Detection box color",
                 "kind":"STRING",
+                "optional":"true",
+                "unit":"Hex Code #RRGGBB"
+            },
+            {
+                "name":"metadata",
+                "description":"Buffer for extra inference metadata",
+                "kind":"STRING",
+                "optional":"true",
                 "unit":"N/A"
             }
         ]
@@ -102,28 +103,16 @@
         "typedefinition": "DetectionPointDataHighPrecision",
         "tags": [
             {
-                "name":"object_id",
-                "description":"Detected object id",
-                "kind":"STRING",
-                "unit":"UUID"
+                "name":"category_id",
+                "description":"Detected object point cateogry/class ID",
+                "kind":"INT64",
+                "unit":"n/a"
             },
             {
-                "name":"object_label",
-                "description":"Detected object proper name",
+                "name":"category_label",
+                "description":"Human interpreted category name of the detected point of interest",
                 "kind":"STRING",
-                "unit":"UUID"
-            },
-            {
-                "name":"class_id",
-                "description":"Detected object's classification type as raw id",
-                "kind":"STRING",
-                "unit":"UUID"
-            },
-            {
-                "name":"class_label",
-                "description":"Detected object's classification as proper name",
-                "kind":"STRING",
-                "unit":"UUID"
+                "unit":"n/a"
             },
             {
                 "name":"x",
@@ -150,10 +139,17 @@
                 "unit":"Percentage"
             },
             {
-                "name":"meta",
-                "description":"Buffer for extra inference metadata",
-		"optional":"true",
+                "name":"color",
+                "description":"Detection box color",
                 "kind":"STRING",
+                "optional":"true",
+                "unit":"Hex Code #RRGGBB"
+            },
+            {
+                "name":"metadata",
+                "description":"Buffer for extra inference metadata",
+                "kind":"STRING",
+                "optional":"true",
                 "unit":"N/A"
             }
         ]

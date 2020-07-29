@@ -1,6 +1,6 @@
 {
     "name":"ModelReceiverStatus",
-    "context":"com.adlinktech.vision",
+    "context":"com.adlinktech.vision.system",
     "qosProfile":"state",
     "version":"2.000",
     "description":"Broadcasts the state of the Inference Engine Model Receiver config status",
