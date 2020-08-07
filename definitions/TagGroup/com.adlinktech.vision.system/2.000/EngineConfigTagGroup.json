@@ -18,15 +18,15 @@
                 "kind":"STRING",
                 "unit":"n/a"
             },
-	    {
+            {
                 "name":"streams",
                 "description":"Streams used by the inference engine",
                 "kind":"MULTI_DIM_NVP",
-		"typedefinition":"EngineStreamConfig",
-		"dimensions":"1",
-		"optional":"true",
+                "typedefinition":"EngineStreamConfig",
+                "dimensions":"1",
+                "optional":"true",
                 "unit":"n/a"
-	    },
+            },
             {
                 "name":"source",
                 "description":"Producer of the inference engine",
@@ -49,7 +49,7 @@
                 "name":"image",
                 "description":"Configured input image expectations",
                 "kind":"MULTI_DIM_NVP",
-		"dimensions":"1",
+                "dimensions":"1",
                 "unit":"n/a",
                 "typedefinition": "ImageConfig"
             },
@@ -57,7 +57,7 @@
                 "name":"model",
                 "description":"Configured (loaded) model metadata",
                 "kind":"MULTI_DIM_NVP",
-		"dimensions":"1",
+                "dimensions":"1",
                 "unit":"n/a",
                 "typedefinition": "ModelConfig"
             }
