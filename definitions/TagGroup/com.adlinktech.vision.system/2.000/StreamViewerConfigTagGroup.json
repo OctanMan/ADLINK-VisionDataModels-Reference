@@ -1,7 +1,7 @@
 [
    {
       "name":"StreamViewerConfig",
-      "context":"com.adlinktech.system",
+      "context":"com.adlinktech.vision.system",
       "qosProfile":"state",
       "version":"2.000",
       "description":"Current configuration of this Stream Viewer instance.",

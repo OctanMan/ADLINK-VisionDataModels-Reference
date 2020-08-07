@@ -1,6 +1,6 @@
 {
    "name":"CreateStream",
-   "context":"com.adlinktech.capture",
+   "context":"com.adlinktech.vision.capture",
    "qosProfile":"event",
    "version":"2.000",
    "description":"Request the creation of a stream with given configuration. Stream's are unique within a Stream Viewer per StreamId and Inference output type combination. Target the correct Stream Viewer by setting the FlowId of this DataSample to the ContextId of the Stream Viewer. The stream_id is encapsulated in the flow_id",
