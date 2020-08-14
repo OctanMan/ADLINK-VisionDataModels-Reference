@@ -9,6 +9,8 @@ This means that all TagGroups from the same context (eg. com.adlinktech.vision) 
 
 Note that some TagGroups may be versioned separately from others, so make sure that if you want the latest, you examine the directories closely.
 
-Any desired changes can be made by creating a PR and submitting it for review. 
+The appropriate procedure is to fork the repository to your own personal account, create a branch, make your suggested changes, then create a Pull Request (PR).
 
 It will then be examined and reviewed, and if deemed appropriate become part of the repositories.
+
+Note that creating a PR early might help in assessing its need and direction early, preventing unnecessary work.
