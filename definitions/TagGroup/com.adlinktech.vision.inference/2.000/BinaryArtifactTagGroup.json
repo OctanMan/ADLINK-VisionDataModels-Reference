@@ -15,7 +15,7 @@
             "name":"target",
             "description":"(Optional) URI/ID of the intended recipient/use case, in case of a destination not on the DataRiver",
             "kind":"STRING",
-	    "optional":"true",
+	    "optional":true,
             "unit":"N/A"
         },
         {

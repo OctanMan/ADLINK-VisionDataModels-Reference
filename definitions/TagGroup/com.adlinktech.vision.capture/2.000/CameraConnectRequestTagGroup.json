@@ -21,7 +21,7 @@
 	"name":"reason",
 	"description": "optional description of the request",
 	"kind":"STRING",
-	"optional":"true",
+	"optional":true,
 	"unit":"n/a"
 },
 {

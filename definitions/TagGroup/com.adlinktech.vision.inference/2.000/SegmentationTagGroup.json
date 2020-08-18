@@ -40,8 +40,8 @@
                 "name":"segmentation_data",
                 "description":"List of Segmentation Data (the results)",
                 "kind":"MULTI_DIM_NVP",
-		"dimensions": "1",
-		"optional":"true",
+		"dimensions": 1,
+		"optional":true,
                 "unit":"n/a",
                 "typedefinition": "SegmentationData"
             },
@@ -49,8 +49,8 @@
                 "name":"segmentation_data_high_precision",
                 "description":"List of Segmentation Data (the results, high precision)",
                 "kind":"MULTI_DIM_NVP",
-		"dimensions": "1",
-		"optional":"true",
+		"dimensions": 1,
+		"optional":true,
                 "unit":"n/a",
                 "typedefinition": "SegmentationDataHighPrecision"
             }
@@ -87,7 +87,7 @@
                 "name":"color",
                 "description":"Segmentation mask color (#XXXXXX)",
                 "kind":"STRING",
-                "optional":"true",
+                "optional":true,
                 "unit":"Color"
             },
             {
@@ -135,7 +135,7 @@
                 "name":"color",
                 "description":"Segmentation mask color (#XXXXXX)",
                 "kind":"STRING",
-                "optional":"true",
+                "optional":true,
                 "unit":"Color"
             },
             {

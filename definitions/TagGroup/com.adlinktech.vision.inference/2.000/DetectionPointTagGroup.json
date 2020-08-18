@@ -28,8 +28,8 @@
                 "name":"detection_point_data",
                 "description":"List of Detection Point Data (the results)",
                 "kind":"MULTI_DIM_NVP",
-		"dimensions":"1",
-		"optional":"true",
+		"dimensions":1,
+		"optional":true,
                 "unit":"n/a",
                 "typedefinition": "DetectionPointData"
             },
@@ -37,8 +37,8 @@
                 "name":"detection_point_data_high_precision",
                 "description":"List of Detection Point Data (the results, high precision)",
                 "kind":"MULTI_DIM_NVP",
-		"dimensions":"1",
-		"optional":"true",
+		"dimensions":1,
+		"optional":true,
                 "unit":"n/a",
                 "typedefinition": "DetectionPointDataHighPrecision"
             }
@@ -87,14 +87,14 @@
                 "name":"color",
                 "description":"Detection box color",
                 "kind":"STRING",
-                "optional":"true",
+                "optional":true,
                 "unit":"Hex Code #RRGGBB"
             },
             {
                 "name":"metadata",
                 "description":"Buffer for extra inference metadata",
                 "kind":"STRING",
-                "optional":"true",
+                "optional":true,
                 "unit":"N/A"
             }
         ]
@@ -142,14 +142,14 @@
                 "name":"color",
                 "description":"Detection box color",
                 "kind":"STRING",
-                "optional":"true",
+                "optional":true,
                 "unit":"Hex Code #RRGGBB"
             },
             {
                 "name":"metadata",
                 "description":"Buffer for extra inference metadata",
                 "kind":"STRING",
-                "optional":"true",
+                "optional":true,
                 "unit":"N/A"
             }
         ]

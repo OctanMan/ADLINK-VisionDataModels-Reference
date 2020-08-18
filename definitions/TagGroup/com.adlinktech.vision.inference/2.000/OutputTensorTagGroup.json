@@ -34,8 +34,8 @@
                 "name":"tensor_data",
                 "description":"List of OutputTensor Data (the results)",
                 "kind":"MULTI_DIM_NVP",
-		"dimensions":"1",
-		"optional":"true",
+		"dimensions":1,
+		"optional":true,
                 "unit":"n/a",
                 "typedefinition": "TensorData"
             },
@@ -43,8 +43,8 @@
                 "name":"tensor_data_high_precision",
                 "description":"List of OutputTensor Data (the results, high precision)",
                 "kind":"MULTI_DIM_NVP",
-		"dimensions":"1",
-		"optional":"true",
+		"dimensions":1,
+		"optional":true,
                 "unit":"n/a",
                 "typedefinition": "TensorDataHighPrecision"
             }

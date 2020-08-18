@@ -8,7 +8,7 @@
         {
             "name": "description",
             "description": "Optional description why the stream should be stopped",
-	    "optional":"true",
+	    "optional":true,
             "kind": "STRING",
             "unit": "NA"
         }

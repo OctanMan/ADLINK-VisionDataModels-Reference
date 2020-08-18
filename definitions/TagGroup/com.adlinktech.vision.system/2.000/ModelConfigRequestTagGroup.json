@@ -26,21 +26,21 @@
        {
           "name": "hardware",
           "description": "The hardware to run the model on: CPU, GPU, VPU or AUTO (optional -- defaults to AUTO)",
-	  "optional":"true",
+	  "optional":true,
           "kind": "STRING",
           "unit": "N/A"
        },
        {
           "name": "threshold",
           "description": "The threshold at which model outputs should be published (optional -- defaults to 0.50)",
-	  "optional":"true",
+	  "optional":true,
           "kind": "FLOAT32",
           "unit": "N/A"
        },
        {
           "name": "reload",
           "description": "A boolean indicating whether or not the model should be dynamically loaded (optional -- defaults to false)",
-	  "optional":"true",
+	  "optional":true,
           "kind": "BOOLEAN",
           "unit": "N/A"
        }

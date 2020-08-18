@@ -22,8 +22,8 @@
                 "name":"detection_box_data",
                 "description":"List of Detection Box Data (the results)",
                 "kind":"MULTI_DIM_NVP",
-		"dimensions":"1",
-		"optional":"true",
+		"dimensions":1,
+		"optional":true,
                 "unit":"n/a",
                 "typedefinition": "DetectionBoxData"
             },
@@ -31,8 +31,8 @@
                 "name":"detection_box_data_high_precision",
                 "description":"List of Detection Box Data (the results, high precision)",
                 "kind":"MULTI_DIM_NVP",
-		"dimensions":"1",
-		"optional":"true",
+		"dimensions":1,
+		"optional":true,
                 "unit":"n/a",
                 "typedefinition": "DetectionBoxDataHighPrecision"
 	    }
@@ -87,13 +87,13 @@
                 "name":"color",
                 "description":"Detection box color",
                 "kind":"STRING",
-		"optional":"true",
+		"optional":true,
                 "unit":"N/A"
             },
             {
                 "name":"metadata",
                 "description":"Buffer for extra inference metadata",
-                "optional":"true",
+                "optional":true,
                 "kind":"STRING",
                 "unit":"N/A"
             }
@@ -148,13 +148,13 @@
                 "name":"color",
                 "description":"Detection box color",
                 "kind":"STRING",
-		"optional":"true",
+		"optional":true,
                 "unit":"N/A"
             },
             {
                 "name":"metadata",
                 "description":"Buffer for extra inference metadata",
-                "optional":"true",
+                "optional":true,
                 "kind":"STRING",
                 "unit":"N/A"
             }

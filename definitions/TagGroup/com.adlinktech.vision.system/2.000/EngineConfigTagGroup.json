@@ -23,8 +23,8 @@
                 "description":"Streams used by the inference engine",
                 "kind":"MULTI_DIM_NVP",
                 "typedefinition":"EngineStreamConfig",
-                "dimensions":"1",
-                "optional":"true",
+                "dimensions":1,
+                "optional":true,
                 "unit":"n/a"
             },
             {
@@ -49,7 +49,7 @@
                 "name":"image",
                 "description":"Configured input image expectations",
                 "kind":"MULTI_DIM_NVP",
-                "dimensions":"1",
+                "dimensions":1,
                 "unit":"n/a",
                 "typedefinition": "ImageConfig"
             },
@@ -57,7 +57,7 @@
                 "name":"model",
                 "description":"Configured (loaded) model metadata",
                 "kind":"MULTI_DIM_NVP",
-                "dimensions":"1",
+                "dimensions":1,
                 "unit":"n/a",
                 "typedefinition": "ModelConfig"
             }
@@ -106,14 +106,14 @@
                 "name":"roi_x1",
                 "description":"Declares Top-Left X position of Region of Interest if image should be croppped",
                 "kind":"UINT32",
-                "optional":"true",
+                "optional":true,
                 "unit":"pixels"
             },
             {
                 "name":"roi_y1",
                 "description":"Declares Top-Left Y position of Region of Interest if image should be croppped",
                 "kind":"UINT32",
-                "optional":"true",
+                "optional":true,
                 "unit":"pixels"
             },
             {

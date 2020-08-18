@@ -14,7 +14,7 @@
        {
           "name":"data_encoding",
           "description":"The type of data encoded in the above. When omitted, TAR format is assumed.",
-	  "optional":"true",
+	  "optional":true,
           "kind":"STRING",
           "unit":"N/A"
        },
