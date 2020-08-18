@@ -2,4 +2,6 @@
 *.log
 *.toc
 *.lot
+.kdev4
+*.kdev4
 docs/TagGroupDocumentationProcessor
