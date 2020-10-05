@@ -36,6 +36,7 @@
                 "name":"tracker_obj_id",
                 "description":"Detected object id",
                 "kind":"INT64",
+		"optional":true,
                 "unit":"UUID"
             },
             {
