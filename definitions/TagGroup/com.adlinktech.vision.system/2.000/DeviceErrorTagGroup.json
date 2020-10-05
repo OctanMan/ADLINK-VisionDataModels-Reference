@@ -1,6 +1,6 @@
 {
     "name":"DeviceError",
-    "context":"com.adlinktech.vision",
+    "context":"com.adlinktech.vision.system",
     "qosProfile":"event",
     "version":"2.000",
     "description":"Device error log",
