@@ -35,14 +35,14 @@
             {
                 "name":"tracker_obj_id",
                 "description":"Detected object id",
-                "kind":"INT64",
+                "kind":"STRING",
 		"optional":true,
                 "unit":"UUID"
             },
             {
                 "name":"category_id",
                 "description":"Detected object cateogry/class ID",
-                "kind":"INT64",
+                "kind":"STRING",
                 "unit":"n/a"
             },
             {
