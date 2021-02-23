@@ -3,7 +3,7 @@
         "name":"Segmentation",
         "context":"com.adlinktech.vision.inference",
         "qosProfile":"telemetry",
-        "version":"2.000",
+        "version":"2.001",
         "description":"Inference engine results for classification model. The stream_id is supposed to be encapsulated in the flow_id",
         "tags":[
             {
@@ -53,7 +53,7 @@
             {
                 "name":"category_id",
                 "description":"Mask cateogry/class identifer",
-                "kind":"INT64",
+                "kind":"STRING",
                 "unit":"n/a"
             },
             {
