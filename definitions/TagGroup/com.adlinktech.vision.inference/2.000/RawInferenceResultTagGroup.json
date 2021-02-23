@@ -3,7 +3,7 @@
         "name":"RawInferenceResult",
         "context":"com.adlinktech.vision.inference",
         "qosProfile":"telemetry",
-        "version":"2.000",
+        "version":"2.1.0",
         "description":"Generic inference engine results for any model",
         "tags":[
             {
