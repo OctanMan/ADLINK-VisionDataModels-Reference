@@ -22,8 +22,8 @@
                 "name":"detection_box_data",
                 "description":"List of Detection Box Data (the results)",
                 "kind":"MULTI_DIM_NVP",
-		"dimensions":1,
-		"optional":true,
+                "dimensions":1,
+                "optional":true,
                 "unit":"n/a",
                 "typedefinition": "DetectionBoxData"
             }
@@ -36,20 +36,20 @@
                 "name":"tracker_obj_id",
                 "description":"Detected object id",
                 "kind":"STRING",
-		"optional":true,
+                "optional":true,
                 "unit":"UUID"
             },
             {
                 "name":"category_id",
-                "description":"Detected object cateogry/class ID",
-                "kind":"STRING",
+                "description":"List of classification category/class IDs",
+                "kind":"STRING_SEQ",
                 "unit":"n/a"
             },
             {
                 "name":"category_label",
-                "description":"Human interpreted category name of the detected object",
-                "kind":"STRING",
-                "unit":"UUID"
+                "description":"List of human interpreted category names",
+                "kind":"STRING_SEQ",
+                "unit":"n/a"
             },
             {
                 "name":"x1",
@@ -85,7 +85,7 @@
                 "name":"color",
                 "description":"Detection box color",
                 "kind":"STRING",
-		"optional":true,
+                "optional":true,
                 "unit":"N/A"
             },
             {

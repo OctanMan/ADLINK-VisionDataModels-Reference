@@ -18,18 +18,18 @@
                 "kind":"UINT32",
                 "unit":"NUM"
             },
-	    {
-		"name":"model_id",
-		"description": "UUID referencing ClassificationData to a project",
-		"kind":"STRING",
-	        "unit":"UUID"
-	    },
+            {
+                "name":"model_id",
+                "description": "UUID referencing ClassificationData to a project",
+                "kind":"STRING",
+                "unit":"UUID"
+            },
             {
                 "name":"classification_data",
                 "description":"List of Classification Data (the results)",
                 "kind":"MULTI_DIM_NVP",
-		"dimensions":1,
-		"optional":true,
+                "dimensions":1,
+                "optional":true,
                 "unit":"n/a",
                 "typedefinition": "ClassificationData"
             }
@@ -40,14 +40,14 @@
         "tags": [
             {
                 "name":"category_id",
-                "description":"Classification category/class ID",
-                "kind":"STRING",
+                "description":"List of classification category/class IDs",
+                "kind":"STRING_SEQ",
                 "unit":"n/a"
             },
             {
                 "name":"category_label",
-                "description":"Human interpreted category name",
-                "kind":"STRING",
+                "description":"List of human interpreted category names",
+                "kind":"STRING_SEQ",
                 "unit":"n/a"
             },
             {
