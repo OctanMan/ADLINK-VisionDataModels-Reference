@@ -40,20 +40,20 @@
         "tags": [
             {
                 "name":"category_id",
-                "description":"Classification category/class ID",
-                "kind":"INT64",
+                "description":"List of classification category/class IDs",
+                "kind":"STRING_SEQ",
                 "unit":"n/a"
             },
             {
                 "name":"category_label",
-                "description":"Human interpreted category name",
-                "kind":"STRING",
+                "description":"List of human interpreted category names",
+                "kind":"STRING_SEQ",
                 "unit":"n/a"
             },
             {
                 "name":"super_category_id",
                 "description":"Super Category ID containing the category",
-                "kind":"INT64",
+                "kind":"STRING",
                 "unit":"n/a"
             },
             {

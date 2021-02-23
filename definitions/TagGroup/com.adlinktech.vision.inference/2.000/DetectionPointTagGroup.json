@@ -41,19 +41,19 @@
             {
                 "name":"tracker_obj_id",
                 "description":"Detected object id",
-                "kind":"INT64",
+                "kind":"STRING",
                 "unit":"UUID"
             },
             {
                 "name":"category_id",
-                "description":"Detected object point cateogry/class ID",
-                "kind":"INT64",
+                "description":"List of classification category/class IDs",
+                "kind":"STRING_SEQ",
                 "unit":"n/a"
             },
             {
                 "name":"category_label",
-                "description":"Human interpreted category name of the detected point of interest",
-                "kind":"STRING",
+                "description":"List of human interpreted category names",
+                "kind":"STRING_SEQ",
                 "unit":"n/a"
             },
             {

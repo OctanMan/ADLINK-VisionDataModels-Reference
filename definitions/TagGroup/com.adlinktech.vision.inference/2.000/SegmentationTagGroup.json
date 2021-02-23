@@ -52,14 +52,14 @@
         "tags": [
             {
                 "name":"category_id",
-                "description":"Mask cateogry/class identifer",
-                "kind":"INT64",
+                "description":"List of mask cateogry/class IDs",
+                "kind":"STRING_SEQ",
                 "unit":"n/a"
             },
             {
                 "name":"category_label",
-                "description":"Human interpreted category name of the mask",
-                "kind":"STRING",
+                "description":"List of human interpreted category names",
+                "kind":"STRING_SEQ",
                 "unit":"n/a"
             },
             {
