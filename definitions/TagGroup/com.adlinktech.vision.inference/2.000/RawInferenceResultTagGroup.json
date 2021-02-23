@@ -19,6 +19,12 @@
                 "unit":"NUM"
             },
             {
+                "name":"model_id",
+                "description": "List of AI model identifiers associated with the result",
+                "kind":"STRING_SEQ",
+                "unit":"n/a"
+            },
+            {
                 "name":"output_tensors",
                 "description":"List of OutputTensor results for each graph output layer",
                 "kind":"MULTI_DIM_NVP",

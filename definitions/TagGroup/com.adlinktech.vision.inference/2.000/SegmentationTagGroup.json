@@ -3,7 +3,7 @@
         "name":"Segmentation",
         "context":"com.adlinktech.vision.inference",
         "qosProfile":"telemetry",
-        "version":"2.000",
+        "version":"2.001",
         "description":"Inference engine results for classification model. The stream_id is supposed to be encapsulated in the flow_id",
         "tags":[
             {
@@ -20,9 +20,9 @@
             },
             {
                 "name":"model_id",
-                "description":"Segmentation mask instance in the result array",
-                "kind":"UINT32",
-                "unit":"NUM"
+                "description": "List of AI model identifiers associated with the result",
+                "kind":"STRING_SEQ",
+                "unit":"n/a"
             },
             {
                 "name":"width",
@@ -40,8 +40,8 @@
                 "name":"segmentation_data",
                 "description":"List of Segmentation Data (the results)",
                 "kind":"MULTI_DIM_NVP",
-		"dimensions": 1,
-		"optional":true,
+                "dimensions": 1,
+                "optional":true,
                 "unit":"n/a",
                 "typedefinition": "SegmentationData"
             }
