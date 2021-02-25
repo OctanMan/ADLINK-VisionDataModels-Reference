@@ -3,7 +3,7 @@
         "name":"DetectionPoint",
         "context":"com.adlinktech.vision.inference",
         "qosProfile":"telemetry",
-        "version":"2.1.0",
+        "version":"2.000",
         "description":"Inference engine results for object detection model outputing points. The stream_id is supposed to be embedded in the flowId.",
         "tags":[
             {
@@ -20,16 +20,16 @@
             },
             {
                 "name":"model_id",
-                "description": "List of AI model identifiers associated with the result",
-                "kind":"STRING_SEQ",
-                "unit":"n/a"
+                "description":" uuid referencing DetectionPointData to a project",
+                "kind":"STRING",
+                "unit":"UUID"
             },
             {
                 "name":"detection_point_data",
                 "description":"List of Detection Point Data (the results)",
                 "kind":"MULTI_DIM_NVP",
-                "dimensions":1,
-                "optional":true,
+		"dimensions":1,
+		"optional":true,
                 "unit":"n/a",
                 "typedefinition": "DetectionPointData"
             }
@@ -41,19 +41,19 @@
             {
                 "name":"tracker_obj_id",
                 "description":"Detected object id",
-                "kind":"STRING",
+                "kind":"INT64",
                 "unit":"UUID"
             },
             {
                 "name":"category_id",
-                "description":"List of classification category/class IDs",
-                "kind":"STRING_SEQ",
+                "description":"Detected object point cateogry/class ID",
+                "kind":"INT64",
                 "unit":"n/a"
             },
             {
                 "name":"category_label",
-                "description":"List of human interpreted category names",
-                "kind":"STRING_SEQ",
+                "description":"Human interpreted category name of the detected point of interest",
+                "kind":"STRING",
                 "unit":"n/a"
             },
             {
