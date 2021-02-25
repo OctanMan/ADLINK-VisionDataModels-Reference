@@ -171,17 +171,21 @@
             }
         ]
     },
-    {"typedefinition":"EngineStreamConfig",
-	    "tags": [
-		    { "name": "source_id",
-		      "description": "The source-stream of the video frames",
-		      "kind" : "STRING",
-		      "unit": "n/a"
-		    },
-		    { "name": "output_id",
-		      "description": "The Inference Data Output StreamId. Defaults to source_id.",
-		      "kind" : "STRING",
-		      "unit": "n/a"
-		    } ]
+    {
+        "typedefinition":"EngineStreamConfig",
+        "tags": [
+            {
+                "name": "source_id",
+		        "description": "The source-stream of the video frames",
+		        "kind" : "STRING",
+		        "unit": "n/a"
+            },
+		    {
+                "name": "output_id",
+		        "description": "The Inference Data Output StreamId. Defaults to source_id.",
+		        "kind" : "STRING",
+		        "unit": "n/a"
+            }
+        ]
     }
 ]

@@ -8,8 +8,9 @@
         "tags":[
             {
                 "name":"configuration_data",
-                "description":"Detection Box Data (the results)",
-                "kind":"NVP_SEQ",
+                "description":"Configuration data",
+                "kind":"MULTI_DIM_NVP",
+                "dimensions":1,
                 "unit":"n/a",
                 "typedefinition": "ConfigData"
             }
