@@ -11,7 +11,7 @@
         "name":"CameraRemoveRequest",
         "context":"com.adlinktech.vision.capture",
         "qosProfile":"event",
-        "version":"2.000",
+        "version":"2.2.0",
         "description":"Camera Add Request: sent when a camera should be added to the river",
         "typedefinition" : "CameraRequest"
     },
