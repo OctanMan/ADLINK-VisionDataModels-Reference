@@ -4,7 +4,7 @@
         "context":"com.adlinktech.vision.inference",
         "qosProfile":"telemetry",
         "version":"2.2.0",
-        "description":"Generic inference engine results for any model. The stream_id is not part of this TagGroup and assumed to be part of the run-time flowId.",
+        "description":"Generic inference engine results for any model. The flowId is expected to be in the form of <stream id>.<engine id>.",
         "tags":[
             {
                 "name":"frame_id",
