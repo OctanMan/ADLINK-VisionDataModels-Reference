@@ -4,7 +4,7 @@
         "context":"com.adlinktech.vision.inference",
         "qosProfile":"telemetry",
         "version":"2.2.0",
-        "description":"Inference engine results for classification models. The flowId is expected to be in the form of <stream id>.<engine id>."
+        "description":"Inference engine results for classification models. The flowId is expected to be in the form of <stream id>.<engine id>.",
         "tags":[
             {
                 "name":"frame_id",
@@ -81,18 +81,18 @@
                 "unit":"n/a"
             },
             {
-                "name":"uuid",
+                "name":"inference_id",
                 "description":"Unique inference identifier",
                 "kind":"STRING",
                 "optional":true,
-                "unit":"UUID"
+                "unit":"uuidv4"
             },
             {
-                "name":"parent_id",
+                "name":"parent_inference_id",
                 "description":"Identifier referencing a parent inference node or result",
                 "kind":"STRING",
                 "optional":true,
-                "unit":"n/a"
+                "unit":"uuidv4"
             }
         ]
     }

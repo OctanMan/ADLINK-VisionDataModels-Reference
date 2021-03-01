@@ -114,18 +114,18 @@
                 "unit":"N/A"
             },
             {
-                "name":"uuid",
+                "name":"inference_id",
                 "description":"Unique inference identifier",
                 "kind":"STRING",
                 "optional":true,
-                "unit":"UUID"
+                "unit":"uuidv4"
             },
             {
-                "name":"parent_id",
+                "name":"parent_inference_id",
                 "description":"Identifier referencing a parent inference node or result",
                 "kind":"STRING",
                 "optional":true,
-                "unit":"n/a"
+                "unit":"uuidv4"
             },
             {
                 "name":"physical_coords",
@@ -134,6 +134,14 @@
                 "optional":true,
                 "unit":"n/a",
                 "typedefinition": "PhysicalCoords"
+            },
+            {
+                "name":"data_code",
+                "description":"Associated data matrix code",
+                "kind":"NVP_SEQ",
+                "optional":true,
+                "unit":"n/a",
+                "typedefinition": "DataCode"
             }
         ]
     },
@@ -169,7 +177,31 @@
                 "description":"Physical size of the detection box length edge",
                 "kind":"FLOAT64",
                 "unit":"meters"
+            },
+            {
+               "name":"phi",
+               "description":"Rotation of object",
+               "kind":"FLOAT64",
+               "optional":true,
+               "unit":"radians"
             }
         ]
+    },
+    {
+       "typedefinition":"DataCode",
+       "tags":[
+        {
+            "name":"id",
+            "description":"DataMatrix code ID",
+            "kind":"STRING",
+            "unit":"n/a"
+         },
+         {
+            "name":"type",
+            "description":"Data code type (ECC200, etc.)",
+            "kind":"STRING",
+            "unit":"n/a"
+         }
+       ]
     }
 ]

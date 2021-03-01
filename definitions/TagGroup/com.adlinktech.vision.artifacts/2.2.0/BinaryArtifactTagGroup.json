@@ -1,7 +1,7 @@
 {
     "name":"BinaryArtifact",
     "context":"com.adlinktech.vision.artifacts",
-    "qosProfile":"event",
+    "qosProfile":"telemetry",
     "version":"2.2.0",
     "description":"Message containing serialized file artifact",
     "tags":[

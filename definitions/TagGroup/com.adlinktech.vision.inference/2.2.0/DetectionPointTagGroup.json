@@ -117,18 +117,26 @@
                 "unit":"N/A"
             },
             {
-                "name":"uuid",
+                "name":"inference_id",
                 "description":"Unique inference identifier",
                 "kind":"STRING",
                 "optional":true,
-                "unit":"UUID"
+                "unit":"uuidv4"
             },
             {
-                "name":"parent_id",
+                "name":"parent_inference_id",
                 "description":"Identifier referencing a parent inference node or result",
                 "kind":"STRING",
                 "optional":true,
-                "unit":"n/a"
+                "unit":"uuidv4"
+            },
+            {
+                "name":"physical_coords",
+                "description":"Real world location of the bounding box",
+                "kind":"NVP_SEQ",
+                "optional":true,
+                "unit":"n/a",
+                "typedefinition": "PhysicalCoords"
             }
         ]
     },
@@ -187,6 +195,29 @@
                 "kind": "STRING_SEQ",
                 "optional": true,
                 "unit": "n/a"
+            }
+        ]
+    },
+    {
+        "typedefinition": "PhysicalCoords",
+        "tags": [
+            {
+                "name":"x",
+                "description":"X coordinate distance from the center of the image",
+                "kind":"FLOAT64",
+                "unit":"meters"
+            },
+            {
+                "name":"y",
+                "description":"Y coordinate distance from the center of the image",
+                "kind":"FLOAT64",
+                "unit":"meters"
+            },
+            {
+                "name":"z",
+                "description":"Z coordinate distance from the configured floor",
+                "kind":"FLOAT64",
+                "unit":"meters"
             }
         ]
     }

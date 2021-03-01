@@ -113,18 +113,18 @@
                 "unit":"bytes"
             },
             {
-                "name":"uuid",
+                "name":"inference_id",
                 "description":"Unique inference identifier",
                 "kind":"STRING",
                 "optional":true,
-                "unit":"UUID"
+                "unit":"uuidv4"
             },
             {
-                "name":"parent_id",
+                "name":"parent_inference_id",
                 "description":"Identifier referencing a parent inference node or result",
                 "kind":"STRING",
                 "optional":true,
-                "unit":"n/a"
+                "unit":"uuidv4"
             }
         ]
     }
