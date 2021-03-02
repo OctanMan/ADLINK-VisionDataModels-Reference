@@ -8,7 +8,7 @@
         {
             "name":"frame_id",
             "description":"Frame sample ID",
-            "kind":"UINT32",
+            "kind":"INT64",
             "unit":"NUM"
         },
         {
