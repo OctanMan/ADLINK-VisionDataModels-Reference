@@ -170,23 +170,23 @@
                 "kind": "MULTI_DIM_NVP",
                 "dimensions": 1,
                 "unit": "n/a",
-                "typedefinition": "GraphNode"
+                "typedefinition": "GraphEdge"
             }
         ]
     },
     {
-        "typedefinition": "GraphNode",
+        "typedefinition": "GraphEdge",
         "tags": [
             {
                 "name": "origin_vertex",
                 "description": "A vertex which will serve as the origin",
-                "kind": "INT64",
+                "kind": "UINT64",
                 "unit": "An index of a DetectionPointData"
             },
             {
                 "name": "destination_vertex",
                 "description": "A vertex which will serve as the destination",
-                "kind": "INT64",
+                "kind": "UINT64",
                 "unit": "An index of a DetectionPointData"
             },
             {
