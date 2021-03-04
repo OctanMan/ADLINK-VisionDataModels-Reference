@@ -13,9 +13,9 @@
                 "unit":"NUM"
             },
             {
-                "name":"model_id",
-                "description": "List of AI model identifiers associated with the result",
-                "kind":"STRING_SEQ",
+                "name":"model",
+                "description": "AI model identifier associated with the result",
+                "kind":"STRING",
                 "optional":true,
                 "unit":"n/a"
             },
@@ -68,15 +68,15 @@
             },
             {
                 "name":"category_id",
-                "description":"List of classification category/class IDs",
-                "kind":"STRING_SEQ",
+                "description":"Classification category/class ID",
+                "kind":"STRING",
                 "optional":true,
                 "unit":"n/a"
             },
             {
                 "name":"category_label",
-                "description":"List of human interpreted category names",
-                "kind":"STRING_SEQ",
+                "description":"Human interpreted category name",
+                "kind":"STRING",
                 "optional":true,
                 "unit":"n/a"
             },
@@ -102,6 +102,13 @@
             {
                 "name":"probability",
                 "description":"Network confidence",
+                "kind":"FLOAT64",
+                "optional":true,
+                "unit":"Percentage"
+            },
+            {
+                "name":"tracker_probability",
+                "description":"Tracker confidence",
                 "kind":"FLOAT64",
                 "optional":true,
                 "unit":"Percentage"
