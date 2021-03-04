@@ -4,7 +4,7 @@
         "context": "com.adlinktech.vision.system",
         "qosProfile": "state",
         "version": "2.2.0",
-        "description": "Reports if a training streamer status is change.",
+        "description": "Current status of a training streamer.",
         "tags": [
             {
                 "name": "FrameStorage",
@@ -13,8 +13,8 @@
                 "unit": "NA"
             },
             {
-                "name": "StreamId",
-                "description": "List of stream id",
+                "name": "StreamInformation",
+                "description": "Information about the stream",
                 "kind": "NVP_SEQ",
                 "unit": "NA",
                 "typedefinition": "StreamInfo"
