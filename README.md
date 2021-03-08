@@ -14,3 +14,7 @@ The appropriate procedure is to fork the repository to your own personal account
 It will then be examined and reviewed, and if deemed appropriate become part of the repositories.
 
 Note that creating a PR early might help in assessing its need and direction early, preventing unnecessary work.
+
+In order to avoid intricate dependencies, it is mandatory to not only change the version on your TagGroup-definition file, but also on the others in the same hierarchy. 
+
+To avoid having to do this manually, a tool called TagGroupVersionBumper will be provided that will allow you to do this.
