@@ -34,13 +34,6 @@
         "typedefinition": "DetectionBoxData",
         "tags": [
             {
-                "name":"tracker_obj_id",
-                "description":"Detected object id",
-                "kind":"STRING",
-                "optional":true,
-                "unit":"UUID"
-            },
-            {
                 "name":"super_category_id",
                 "description":"Super category/class ID",
                 "kind":"STRING",
@@ -69,6 +62,14 @@
                 "unit":"n/a"
             },
             {
+                "name":"tracker_data",
+                "description":"Tracking data associated with this object",
+                "kind":"NVP_SEQ",
+                "optional":true,
+                "unit":"n/a",
+                "typedefinition": "TrackerData"
+            },
+            {
                 "name":"x1",
                 "description":"Top Left X Coordinate (% from 0,0)",
                 "kind":"FLOAT64",
@@ -95,13 +96,6 @@
             {
                 "name":"probability",
                 "description":"Network confidence",
-                "kind":"FLOAT64",
-                "optional":true,
-                "unit":"Percentage"
-            },
-            {
-                "name":"tracker_probability",
-                "description":"Tracker confidence",
                 "kind":"FLOAT64",
                 "optional":true,
                 "unit":"Percentage"
@@ -207,6 +201,45 @@
             "name":"type",
             "description":"Data code type (ECC200, etc.)",
             "kind":"STRING",
+            "unit":"n/a"
+         }
+       ]
+    },
+    {
+       "typedefinition":"TrackerData",
+       "tags":[
+         {
+            "name":"tracker_obj_id",
+            "description":"Detected object id",
+            "kind":"STRING",
+            "unit":"UUID"
+         },
+         {
+             "name":"tracker_probability",
+             "description":"Tracker confidence",
+             "kind":"FLOAT64",
+             "optional":true,
+             "unit":"Percentage"
+         },
+         {
+            "name":"direction",
+            "description":"Current direction in which this tracked object is moving.",
+            "kind":"FLOAT64",
+            "optional":true,
+            "unit":"degrees"
+         },
+         {
+            "name":"lines_crossed",
+            "description":"List of line names crossed by this object.",
+            "kind":"STRING_SEQ",
+            "optional":true,
+            "unit":"n/a"
+         },
+         {
+            "name":"roi_status",
+            "description":"List of ROI names that the object is currently in.",
+            "kind":"STRING_SEQ",
+            "optional":true,
             "unit":"n/a"
          }
        ]
