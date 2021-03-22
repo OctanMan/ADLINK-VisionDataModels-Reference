@@ -1,0 +1,72 @@
+[
+    {
+        "name":"CameraAddRequest",
+        "context":"com.adlinktech.vision.capture",
+        "qosProfile":"event",
+        "version":"2.2.0",
+        "description":"Camera Add Request: sent when a camera should be added to the Date River",
+        "typedefinition" : "CameraRequest"
+    },
+    {
+        "name":"CameraRemoveRequest",
+        "context":"com.adlinktech.vision.capture",
+        "qosProfile":"event",
+        "version":"2.2.0",
+        "description":"Camera Remove Request: sent when a camera should be removed from the Data River",
+        "typedefinition" : "CameraRequest"
+    },
+    {
+        "typedefinition":"CameraRequest",
+	    "tags": [
+            {
+                "name":"reason",
+                "description": "optional description of the request",
+                "kind":"STRING",
+                "optional":true,
+                "unit":"n/a"
+            },
+            {
+                "name":"camera_info",
+                "description": "the description of the camera",
+                "kind":"NVP_SEQ",
+                "typedefinition":"CameraInfo",
+                "unit":"n/a"
+            } 
+	    ]
+    },
+    {
+        "typedefinition": "CameraInfo",
+        "tags":[
+            {
+                "name":"camera_id",
+                "description":"Unique camera id",
+                "kind":"STRING",
+                "unit":"n/a"
+            },
+            {
+                "name":"uri",
+                "description":"Camera network URI",
+                "kind":"STRING",
+                "unit":"n/a"
+            },
+            {
+                "name":"name",
+                "description":"Name of the Camera",
+                "kind":"STRING",
+                "unit":"n/a"
+            },
+            {
+                "name":"encoding",
+                "description":"Requested Encoding to be used by the Camera",
+                "kind":"STRING",
+                "unit":"CompressionKind"
+            },
+            {
+                "name":"port",
+                "description":"Port number",
+                "kind":"UINT32",
+                "unit":"Value"
+            }
+        ]
+    }    
+]
